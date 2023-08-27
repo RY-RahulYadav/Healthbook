@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './styles/main.css'
-
+import Header from './components/header'
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div></div>
+    
     </>
   )
 }
