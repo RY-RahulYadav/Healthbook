@@ -8,7 +8,7 @@ function   Optionlogin(props){
         <div className="loginBox">
         <div className="bigSignup ">
         
-        <div><img src="https://cdn.dribbble.com/users/1129235/screenshots/10762000/media/ace6e95b814e602a1b5a0527a54af10f.gif"  alt="" /></div>
+        <div><img src="/health4.gif"  alt="" /></div>
         <div onClick={props.closefunction}> <i className="fa-solid fa-x crossIcon" style= {{cursor:'pointer'}}></i></div>
         <form method="POST" autocomplete="off">
         
@@ -17,10 +17,10 @@ function   Optionlogin(props){
             <div className="Signucontainer">
                  <div className="emailSet">
                  <div className="submitSet">
-                    <button  type="submit">login as Doctor</button>
+                    <button onClick={(event)=>{props.closefunction();navigate("/login/doctor")}} >login as Doctor</button>
                  </div>
                  <div className="submitSet">
-                    <button  type="submit">login as Patient</button>
+                    <button  onClick={(event)=>{props.closefunction();navigate("/signup/patient")}} >login as Patient</button>
                  </div>
               
                  </div>
@@ -42,11 +42,7 @@ function   Optionlogin(props){
 
 function   OptionSignup(props){
     const navigate= useNavigate();
- function   handleSubmit(event){
-    event.preventDefault()
 
-
-    }
     return(
         <div>
             <div><div className="modalContainer"></div>
@@ -55,17 +51,17 @@ function   OptionSignup(props){
         
         <div><img src="/health4.gif"  alt="" /></div>
         <div onClick={props.closefunction}> <i className="fa-solid fa-x crossIcon" style= {{cursor:'pointer'}}></i></div>
-        <form method="POST"  autocomplete="off">
+        
         
         <div >
            <div><p className="signUpText">Health<span>book</span></p></div>
             <div className="Signucontainer">
                  <div className="emailSet">
                  <div className="submitSet">
-                    <button onClick={(event)=>{event.preventDefault();navigate("/signup/doctor" );}}  type="submit">Signup as Doctor</button>
+                    <button onClick={(event)=>{ props.closefunction(); navigate("/signup/doctor" );}} >Signup as Doctor</button>
                  </div>
                  <div className="submitSet">
-                    <button onClick={(event)=>{event.preventDefault();navigate("/signup/patient")}} type="submit" >Signup as Patient</button>
+                    <button onClick={(event)=>{props.closefunction();navigate("/signup/patient")}} >Signup as Patient</button>
                  </div>
               
                  </div>
@@ -78,7 +74,7 @@ function   OptionSignup(props){
                  
                 <div className="OptionLogin"><span>Already have an account  ?</span> <a onClick={()=>{props.closefunction();props.openModalFunction("login")}}  style={{color:"rgb(0 151 255)",fontWeight:'400' , cursor:'pointer' }}>Click login</a></div>
             </div>
-        </div></form></div></div></div>
+        </div></div></div></div>
         </div>
     )
 }

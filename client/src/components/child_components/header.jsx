@@ -65,7 +65,7 @@ function Header() {
            { optionmodal.status===true &&  (optionmodal?.type==="signup" && < OptionSignup openModalFunction={handleclick} closefunction={closehandleclick} /> )} 
            
         </div>
-        {/* <Outlet/> */}
+        <Outlet/>
         </>
     )
 }
