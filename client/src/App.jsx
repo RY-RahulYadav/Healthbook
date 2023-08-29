@@ -1,14 +1,24 @@
 import { useState } from 'react'
 import './styles/main.css'
-import Header from './components/header'
-
-
+import "./styles/signup.css"
+import Header from './components/child_components/header'
+import Home from './components/home'
+import SignupDoctor from './components/registerDoctor'
+import SignupPatient from './components/registerPatient'
+import {BrowserRouter as Router , Routes , Route } from "react-router-dom"
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-    
+    <Router>
+      <Routes>
+        <Route path ='/'  element ={<Home/>}/>
+        <Route path ="/signup/doctor"  element ={<SignupDoctor/>}/>
+        <Route path ="/signup/patient"  element ={<SignupPatient/>}/>
+       
+      </Routes>
+    </Router>
     </>
   )
 }

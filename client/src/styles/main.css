@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  /* width: 100vw; */
+  /* font-size: 0.925rem; */
+}
+
+/* html{
+  font-size: 2vh;
+} */
+a {
+    text-decoration: none;
+    color: black;
+  }
+  .container {
+    width: 1170px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .navbar {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    padding: 1rem 1.15rem;
+    border-bottom: 1px solid #eceef3;
+   
+  }
+  
+  .navbar .navbar-header {
+    display: flex;
+    align-items: center;
+  }
+  
+   .navbar-nav {
+    margin-left: auto;
+    flex-direction: row;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  
+  .navbar-nav  li a {
+    color: #3c4250;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+  
+   .navbar-nav  li  a:hover {
+    color: #66f;
+  }
+   .navbar-header   span {
+    color: #66f;
+  }
+  
+  .navbar-header h4 {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  /* optionModal */
+
+  .modalContainer {
+    z-index: 100;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #000000b3;
+    width: 100vw;
+     height: 300vh; 
+    filter: blur(0rem);
+}
+
+.loginBox {
+  z-index: 12000;
+  position: absolute;
+  box-shadow: 0 0 20px 1px #ffffff7a;
+  top: 6rem;
+  left: 22rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(4rem);
+  width: 50rem;
+  height: 30rem;
+}
+.bigSignup {
+  display: flex;
+}
+.bigSignup img {
+  width: 25rem;
+  height: 30rem;
+  opacity: .8;
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+.signUpText {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 500;
+  width: 24rem;
+  text-align: center;
+  margin-top: 2.3rem;
+  
+  margin-bottom: 0.5rem;
+}
+.signUpText span {
+    color: #66f;
+}
+.Signucontainer {
+  z-index: 600;
+  width: 25rem;
+  height: 20rem;
+  position: relative;
+  top: 1rem;
+}
+.crossIcon {
+  color: #000;
+  position: absolute;
+  top: 2rem;
+  left: 47rem;
+  color: #fff;
+}
+
+
+.submitSet button {
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  position: relative;
+  top: 1.7rem;
+  left: 4.7rem;
+  width: 60%;
+  height: 3.3rem;
+  background-color: transparent;
+  border: rgb(172, 172, 199) solid 2px;
+  outline: none;
+  border-radius: 0.5rem;
+  margin: 1.2rem auto;
+}
+.OptionLogin {
+  position: relative;
+  width: 25rem;
+  top: 6rem;
+  left: 4.2rem;
+ color: white;
+}
