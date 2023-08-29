@@ -20,7 +20,7 @@ function   Optionlogin(props){
                     <button onClick={(event)=>{props.closefunction();navigate("/login/doctor")}} >login as Doctor</button>
                  </div>
                  <div className="submitSet">
-                    <button  onClick={(event)=>{props.closefunction();navigate("/signup/patient")}} >login as Patient</button>
+                    <button  onClick={(event)=>{props.closefunction();navigate("/login/patient")}} >login as Patient</button>
                  </div>
               
                  </div>
