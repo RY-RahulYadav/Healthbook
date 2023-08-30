@@ -10,19 +10,19 @@
      height: 300vh; 
     filter: blur(0rem);
 }
-
 .loginBox {
   z-index: 12000;
-  position: absolute;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.753);
   box-shadow: 0 0 20px 1px #ffffff7a;
   top: 9rem;
-  left: 22rem;
+  left: 25rem;
   border-radius: 2rem;
-  backdrop-filter: blur(4rem);
+  backdrop-filter: blur(2rem);
   width: 50rem;
   height: 30rem;
 }
-.bigSignup {
+ .bigSignup {
   display: flex;
 }
 .bigSignup img {
@@ -31,7 +31,7 @@
   opacity: .8;
   border-radius: 2rem 0rem 0rem 2rem;
 }
-.signUpText {
+ .signUpText {
   color: white;
   font-size: 2.2rem;
   font-weight: 500;
@@ -41,17 +41,17 @@
   
   margin-bottom: 0.5rem;
 }
-.signUpText span {
+ .signUpText span {
     color: #66f;
 }
-.Signucontainer {
+ .Signucontainer {
   z-index: 600;
   width: 25rem;
   height: 20rem;
   position: relative;
   top: 1rem;
 }
-.crossIcon {
+ .crossIcon {
   color: #000;
   position: absolute;
   top: 2rem;
@@ -60,7 +60,7 @@
 }
 
 
-.submitSet button {
+ .submitSet button {
   color: white;
   font-size: 1.1rem;
   text-align: center;
@@ -75,7 +75,7 @@
   border-radius: 0.5rem;
   margin: 1.2rem auto;
 }
-.OptionLogin {
+ .OptionLogin {
   position: relative;
   width: 25rem;
   top: 6rem;

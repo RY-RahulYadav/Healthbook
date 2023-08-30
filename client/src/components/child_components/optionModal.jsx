@@ -3,7 +3,7 @@ import { redirect, useNavigate } from "react-router-dom";
 function   Optionlogin(props){
     const navigate = useNavigate()
     return(
-        <div>
+        <div className="optionModalBox1">
             <div><div className="modalContainer"></div>
         <div className="loginBox">
         <div className="bigSignup ">

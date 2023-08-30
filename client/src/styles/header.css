@@ -12,45 +12,52 @@ body {
   /* font-size: 0.925rem; */
 }
 
-/* html{
+html{
   font-size: 2vh;
-} */
+}
 a {
     text-decoration: none;
     color: black;
   }
-  .container {
-    width: 1170px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+ .container12{
+  margin: auto;
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+ }
   
   .navbar {
+   height: 5rem;
+    
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     background-color: #fff;
-    padding: 1rem 1.15rem;
+    /* padding: 1rem 1.15rem; */
     border-bottom: 1px solid #eceef3;
    
   }
+  .navbar-header {
   
-  .navbar .navbar-header {
     display: flex;
+ 
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-menu{
+  
+    margin-left: 2rem ;
+  }
+  
+  .navbar-nav {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
   }
-  
-   .navbar-nav {
-    margin-left: auto;
-    flex-direction: row;
-    display: flex;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-  }
-  
   .navbar-nav  li a {
+    font-size: 1.1rem;
     color: #3c4250;
     text-decoration: none;
     display: inline-block;
@@ -61,12 +68,15 @@ a {
     color: #66f;
   }
    .navbar-header   span {
+
     color: #66f;
   }
-  
-  .navbar-header h4 {
+  .navbar-header h4{
     font-weight: 500;
-    font-size: 1.25rem;
+    margin-top: 5px;
+    font-size: 1.3rem;
   }
+  
+  
 
   

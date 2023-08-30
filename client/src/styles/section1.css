@@ -1,0 +1,56 @@
+
+.sectionBox1{
+    
+    width: 80vw;
+    margin: auto;
+    margin-top: 10rem;
+    display: flex;
+
+}
+
+.sectionBox1 .healthTitle{
+    position: relative;
+    top: 5rem;
+width: 30vw ;
+
+}
+.sectionBox1 .healthTitle p{
+    margin-top: 2rem;
+   font-size: 1.4rem;
+
+}
+.sectionBox1 .heathname1{
+    font-size: 4rem;
+    width: 30vw;
+}
+.sectionBox1 .heathname2 {
+    font-size: 5rem;
+    width: 30vw;
+}
+.sectionBox1 .heathname2   span {
+
+    color: #66f;
+  }
+
+  .sectionBox1 .heathimgsection{
+    width: 50vw;
+
+}
+.sectionBox1 .heathimgsection .img1{
+    width: 35rem;
+    height: 35rem;
+    position: relative;
+    top: -5rem;
+    left: 5rem;
+    border-radius: 50%;
+    z-index: 200;
+}
+.sectionBox1 .heathimgsection .img2{
+    width: 25rem;
+    height: 25rem;
+    position: relative;
+    top: 5rem;
+    left: 0rem;
+    border-radius: 50%;
+    z-index: -1;
+}

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useNavigate } from "react-router-dom"
 import {Optionlogin , OptionSignup} from "./optionModal"
 
 
@@ -38,27 +38,30 @@ function Header() {
             })
     }
 
-     
-
-
+    
     return (
         <>
         <div>
             <nav className="navbar">
-                <div className="container">
+                <div className="container12">
                     <div className="navbar-header">
-                        <Link to="/"><h4>Health<span>book</span></h4></Link>
-                    </div>
-
-                    <div className="navbar-menu" id="open-navbar1">
+                       <div> <Link to="/"><h4>Health<span>book</span></h4></Link></div>
+                        <div className="navbar-menu" id="open-navbar1">
                         <ul className="navbar-nav">
                             <li><Link to="/">Home</Link></li>
-                            <li><Link to="">About</Link></li>
-                            <li><Link to="">Search</Link></li>
-                            <li  onClick={()=>{handleclick("signup")}}><Link >Signup</Link></li>
-                            <li onClick={()=>{handleclick("login")}}><Link >Login</Link></li>
+                            <li ><Link to="">About</Link></li>
+                            <li><Link to="/contact">contact Us </Link></li>
+                           
                         </ul>
                     </div>
+                    </div>
+
+                    
+                    <div className="navbar-nav">
+                            <li  onClick={()=>{handleclick("signup")}}><Link >Signup</Link></li>
+                            <li onClick={()=>{handleclick("login")}}><Link >Login</Link></li>
+                    </div>
+                    
                 </div>
             </nav>
            { optionmodal.status===true &&  (optionmodal?.type==="login" && < Optionlogin openModalFunction={handleclick} closefunction={closehandleclick} /> )}
