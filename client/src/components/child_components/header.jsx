@@ -50,6 +50,7 @@ function Header() {
                         <ul className="navbar-nav">
                             <li><Link to="/">Home</Link></li>
                             <li ><Link to="">About</Link></li>
+                            <li ><Link to="">Search</Link></li>
                             <li><Link to="/contact">contact Us </Link></li>
                            
                         </ul>

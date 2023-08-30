@@ -7,7 +7,8 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; 
+    box-sizing: border-box;
   /* width: 100vw; */
   /* font-size: 0.925rem; */
 }

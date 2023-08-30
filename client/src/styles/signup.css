@@ -18,48 +18,54 @@
 
 .wrapper{
     position: relative;
-    width: 600px;
+    width: 900px;
+    height: 100vh;
     top: -2rem;
-    left: -5vw;
+    left: 0vw;
     /* top: -2vh; */
   background: #fff;
   margin: 50px auto;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
+  /* box-shadow: 0 0 10px #000000; */
+  /* box-shadow: 2px 2px 4px rgba(0,0,0,0.125); */
   padding: 30px;
   
 }
 
 .wrapper .title{
-  font-size: 24px;
+  font-size: 34px;
+
   font-weight: 700;
-  margin-bottom: 25px;
-  color: #fec107;
+  margin-bottom: 40px;
+  color: #4b43dd;
   text-transform: uppercase;
   text-align: center;
 }
 
 .wrapper .form{
   width: 100%;
+  padding-left: 7rem;
 }
 
 .wrapper .form .inputfield{
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
 }
 
 .wrapper .form .inputfield label{
    width: 200px;
-   color: #757575;
+   color: #000000;
    margin-right: 10px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .wrapper .form .inputfield .input,
 .wrapper .form .inputfield .textarea{
-  width: 100%;
+  width: 60%;
+  height: 2.3rem;
   outline: none;
-  border: 1px solid #d5dbd9;
+  border: 1px solid #474747;
   font-size: 15px;
   padding: 8px 10px;
   border-radius: 3px;
@@ -67,14 +73,15 @@
 }
 
 .wrapper .form .inputfield .textarea{
-  width: 100%;
-  height: 100px;
+  width: 60%;
+  height: 130px;
   resize: none;
 }
 
 .wrapper .form .inputfield .custom_select{
   position: relative;
-  width: 100%;
+  border: 1px solid #474747;
+  width: 60%;
   height: 37px;
 }
 
@@ -106,7 +113,7 @@
 .wrapper .form .inputfield .input:focus,
 .wrapper .form .inputfield .textarea:focus,
 .wrapper .form .inputfield .custom_select select:focus{
-  border: 1px solid #fec107;
+  border: 1px solid #3c00ff;
 }
 
 .wrapper .form .inputfield p{
@@ -126,39 +133,18 @@
   left: 0;
   opacity: 0;
 }
-.wrapper .form .inputfield .check .checkmark{
-  width: 15px;
-  height: 15px;
-  border: 1px solid #fec107;
-  display: block;
-  position: relative;
-}
-.wrapper .form .inputfield .check .checkmark:before{
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 2px;
-  width: 5px;
-  height: 2px;
-  border: 2px solid;
-  border-color: transparent transparent #fff #fff;
-  transform: rotate(-45deg);
-  display: none;
-}
-.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
-  background: #fec107;
-}
 
-.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
-  display: block;
-}
+
 
 .wrapper .form .inputfield .btn{
-  width: 100%;
+  width: 30%;
    padding: 8px 10px;
-  font-size: 15px; 
+   position: relative;
+   top: 1rem;
+   left: 10rem;
+  font-size: 18px; 
   border: 0px;
-  background:  #fec107;
+  background:  #4506cd;
   color: #fff;
   cursor: pointer;
   border-radius: 3px;

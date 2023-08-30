@@ -8,9 +8,8 @@ function RegisterDoctor(props) {
 
 
             <div className="registerBox">
-                <div><img className="img1" a src="../../public/health3.gif" alt="" /></div>
-                <div className="wrapper">
-                    {registerType == "doctor" ? <div className="title"><i className="fa-solid fa-user-doctor"></i>Doctor Registration Form </div> : <div className="title"><i className="fa-solid fa-user"></i>
+                   <div className="wrapper">
+                    {registerType == "doctor" ? <div className="title"><i className="fa-solid fa-user-doctor" style={{marginRight:'1rem'}}></i>Doctor Registration Form </div> : <div className="title"><i className="fa-solid fa-user"></i>
                         Patient Registration Form
                     </div>}
                     <div className="form">
@@ -22,10 +21,7 @@ function RegisterDoctor(props) {
                             <label>Last Name</label>
                             <input type="text" className="input" />
                         </div>
-                        {registerType == "doctor" && <div className="inputfield">
-                            <label>Medical Registration number</label>
-                            <input type="number" className="input" />
-                        </div>}
+                       
                         <div className="inputfield">
                             <label>Adhar number</label>
                             <input type="number" className="input" />
@@ -50,7 +46,7 @@ function RegisterDoctor(props) {
                         </div>
                         <div className="inputfield">
                             <label>Address</label>
-                            <textarea className="textarea"></textarea>
+                            <textarea className="textarea" ></textarea>
                         </div>
                         <div className="inputfield">
                             <label>Password</label>
@@ -60,18 +56,13 @@ function RegisterDoctor(props) {
                             <label>Confirm Password</label>
                             <input type="password" className="input" />
                         </div>
-                        <div className="inputfield terms">
-                            <label className="check">
-                                <input type="checkbox" />
-                                <span className="checkmark"></span>
-                            </label>
-                            <p>Agreed to terms and conditions</p>
-                        </div>
+                       
                         <div className="inputfield">
                             <input type="submit" value="Register" className="btn" />
                         </div>
                     </div>
                 </div>
+                <div><img className="img1"  src="https://cdn.dribbble.com/users/1484145/screenshots/14190753/media/2aaf9372d06d123bf19df6a48c2f613e.png" alt="" /></div>
             </div></>
     )
 }
