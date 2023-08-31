@@ -32,6 +32,7 @@
     width: 92vw;
     margin: auto;
     display: flex;
+    /* justify-content: space-between; */
 
 }
 .card h5{
@@ -40,8 +41,11 @@
 .Sbox5 .card{
     width: 30vw;
     margin:5px ;
+    /* border: none; */
+  
     
 }
+
 .Sbox6 .card{
     width: 70vw;
     margin:10px auto;

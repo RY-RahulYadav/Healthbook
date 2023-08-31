@@ -90,7 +90,7 @@
     margin-bottom: 5px;
 }
 
-.loginBox21 input, button {
+.loginBox21 input,.loginBox21 button {
     height: 3rem;
   
     border-radius: 5px;

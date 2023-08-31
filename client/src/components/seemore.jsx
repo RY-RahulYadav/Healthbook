@@ -41,17 +41,17 @@ function SeeMore() {
                
        
                 <div className="Sbox5">
-                    <CardSee title="Disease Name" content="" />
-                    <CardSee title="Hospital Name" content="" />
-                    <CardSee title="Hospital Id" content="" />
+                    <CardSee title="Disease Name" content="ggh" />
+                    <CardSee title="Hospital Name" content="ghhjh" />
+                    <CardSee title="Hospital Id" content="gff" />
                 </div>  
                 <div className="Sbox5">
-                    <CardSee title="Doctor Name" content="" />
-                    <CardSee title="Date" content="" />
-                    <CardSee title="Phone No" content="" />
+                    <CardSee title="Doctor Name" content="gh" />
+                    <CardSee title="Date" content="gghgh" />
+                    <CardSee title="Phone No" content="ghb" />
                 </div> 
                 <div className="Sbox6">
-                   <CardSee title="Hospital Address" content={""}/>
+                   <CardSee title="Hospital Address" content={"ggg"}/>
                 </div>
                 <div className="Sbox6">
                    <CardSee title="Diagosis" content={""}/>

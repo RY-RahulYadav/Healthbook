@@ -6,6 +6,7 @@ function CardSee(props) {
                 < div class="card-body">
                     <h5 class="card-title">{props.title} </h5>
                     <p class="card-text">{props.content}</p>
+                    {/* <input type="text" /> */}
 
                 </div>
             </div>

@@ -1,6 +1,18 @@
+import { useState } from "react";
 
 function RegisterDoctor(props) {
     const registerType = props.Rtype;
+    const [registerDetails , setRegisterdetails] =useState({
+        Fname :'',
+        Lname:'',
+        AdharNo:'',
+        Gender:'',
+        Email:'',
+        phoneNo:'',
+        Address:''
+
+    })
+
 
     return (
         <>
@@ -58,7 +70,7 @@ function RegisterDoctor(props) {
                         </div>
                        
                         <div className="inputfield">
-                            <input type="submit" value="Register" className="btn" />
+                            <button type="submit"  className="btn" >Register</button>
                         </div>
                     </div>
                 </div>

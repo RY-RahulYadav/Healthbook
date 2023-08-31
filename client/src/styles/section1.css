@@ -43,7 +43,7 @@ width: 30vw ;
     top: -5rem;
     left: 5rem;
     border-radius: 50%;
-    z-index: 200;
+    z-index: 50;
 }
 .sectionBox1 .heathimgsection .img2{
     width: 25rem;

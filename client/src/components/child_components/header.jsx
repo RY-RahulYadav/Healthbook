@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link, Outlet, useNavigate } from "react-router-dom"
 import {Optionlogin , OptionSignup} from "./optionModal"
+import Search from "../search"
 
 
 function Header() {
@@ -50,7 +51,7 @@ function Header() {
                         <ul className="navbar-nav">
                             <li><Link to="/">Home</Link></li>
                             <li ><Link to="">About</Link></li>
-                            <li ><Link to="">Search</Link></li>
+                            <li ><Link to="/search/patient">Search</Link></li>
                             <li><Link to="/contact">contact Us </Link></li>
                            
                         </ul>
@@ -67,7 +68,7 @@ function Header() {
             </nav>
            { optionmodal.status===true &&  (optionmodal?.type==="login" && < Optionlogin openModalFunction={handleclick} closefunction={closehandleclick} /> )}
            { optionmodal.status===true &&  (optionmodal?.type==="signup" && < OptionSignup openModalFunction={handleclick} closefunction={closehandleclick} /> )} 
-           
+         
         </div>
         <Outlet/>
         </>

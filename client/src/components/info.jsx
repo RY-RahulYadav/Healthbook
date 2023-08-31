@@ -1,4 +1,7 @@
+import { useNavigate , Link } from "react-router-dom"
+
 function Info() {
+    const navigate =useNavigate()
     return (
         <div className="patientinfobigBox">
             <div className="patientinfobigBox1">
@@ -44,7 +47,7 @@ function Info() {
                         <p>sbdbs</p>
                         <p>vgsdgse</p>
                         <p>sdhsh</p>
-                       <p><a href="">See more</a></p> 
+                       <p><Link to="/details/patient">See more</Link></p> 
                     </div>
                     
                   
@@ -52,7 +55,7 @@ function Info() {
             </div>
             <div className="Pbox5"></div>
             <div className="Pbox6">
-            <button type="button" class="btn btn-primary">Add New Patient Disease</button>
+           <div onClick={()=>{navigate('/upgrade/patient')}}><button type="button" class="btn btn-primary">Add New Patient Disease</button></div> 
             </div>
         </div>
 
