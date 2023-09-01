@@ -12,33 +12,39 @@ const doctorSchema = new Schema({
         type:String,
         require:true
     },
+    username:{
+        type:String,
+        require:true,
+    },
     Doctorname:{
         type:String,
         require:true,
 
     },
-    username:{
+    AdharNo:{
         type:String,
         require:true,
+
     },
+   
     HospitalAddress:{
         type:String,
         require:true
     },
-    doctorHospital:{
+    HospitalName:{
         type:String,
         require:true
     },
-    gender:{
+    Gender:{
         type:String,
         require:true
     },
-    email:{
+    Email:{
         type:String,
         require:true
     },
-    phoneNo:{
-        type:Number,
+    PhoneNo:{
+        type:String,
         require:true
     },
    

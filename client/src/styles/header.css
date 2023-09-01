@@ -13,6 +13,7 @@ body {
   /* font-size: 0.925rem; */
 }
 
+
 html{
   font-size: 2vh;
 }
@@ -22,7 +23,7 @@ a {
   }
  .container12{
   margin: auto;
-  width: 85vw;
+  width: 83vw;
   display: flex;
   justify-content: space-between;
 
@@ -80,4 +81,38 @@ a {
   
   
 
-  
+  /* logedicon jsx style */
+  .logediconbox{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .logediconbox img {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0%;
+    margin-right: 0.8rem;
+  }
+  .logediconbox p{
+    margin-top: 15px;
+    font-size: 1.03rem;
+  }
+  .logedcontainer .dropdown-menu{
+  margin: 0 1rem;
+ 
+    height: 10rem;
+    background-color: rgb(42, 41, 43);
+    color: white;
+  }
+  .logedcontainer .dropdown-menu li{
+    margin: 0.7rem auto;
+  }
+  .logedcontainer .dropdown-menu .dropdown-item:hover{
+      background-color: black;
+  }
+
+  .logedcontainer .dropdown-menu a{
+    color: #eceef3;
+  }

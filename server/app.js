@@ -7,6 +7,7 @@ const passport= require("passport")
 const PatientUser = require("./modals/patientSchema.js")
 const LocalStrategy = require('passport-local');
 const DoctorUser = require('./modals/doctorSchema.js');
+const cors = require('cors')
 
 
 const port = process.env.PORT||3000;
@@ -14,14 +15,19 @@ const app = express();
 connectTomongodb();
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(cors({
+  origin: [ 'http://localhost:5173'], 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Allow cookies and credentials
 
+}));
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
   // httpOnly: true,
   cookie: { 
-    sameSite: 'none',    secure:false}
+       secure:false}
 }))
 
 app.use(passport.initialize())

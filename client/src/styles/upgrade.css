@@ -3,7 +3,14 @@
 }
 
 .updatebox .txt-col-white {
-    color: #fff;
+    color: #ffffff;
+}
+.spanTitle{
+    
+   background-color: #0f274e;
+   border: rgb(113, 113, 160) solid 1px ;
+  
+
 }
 
 .updatebox .med-list {
@@ -49,8 +56,8 @@
     margin-bottom: 10px;
 }
 
-.updatebox button[type="submit"] {
-    margin: auto;
+.updatebox button[type="button"] {
+    margin: 8rem auto;
     width: 50%;
     padding: 10px 20px;
     border: none;
@@ -59,4 +66,5 @@
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+    
 }

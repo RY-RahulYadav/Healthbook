@@ -1,26 +1,83 @@
-import { useNavigate , Link } from "react-router-dom"
+import { useContext, useEffect, useState } from "react"
+import { useNavigate , Link, useParams, json } from "react-router-dom"
+import NotFound from "./child_components/not_found"
+import { Loginstatus , User } from "./child_components/Global_data";
 
 function Info() {
+    const [SearchPatient , setSearchPatient] = useState({})
+    const [patientExist , setpatientExist] = useState()
+    const [checklogin , setchecklogin] = useContext(Loginstatus)
+    const [userDetails, setuserDetails] = useContext(User)
+    let initilize =false;
     const navigate =useNavigate()
+    const {id} = useParams()
+    console.log(id)
+    useEffect(()=>{
+        const FetchPatientData = async ()=>{
+            const res = await fetch("http://localhost:3000/api/auth/doctor/search/patient" , {
+                method:'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body:JSON.stringify({
+                    PatientId:id
+                }),
+                credentials:'include'
+            })
+         const data=    await res.json()
+         if(res.status==200){
+            console.log(data)
+           setSearchPatient(data)
+           setpatientExist(true)
+         }
+         else if(res.status==401){
+            
+                
+                setpatientExist(false)
+                
+            
+         }
+         else{
+            alert("server error")
+         }
+        }
+     if(!initilize){
+        if(checklogin && userDetails.userType==="doctor" ){
+          FetchPatientData();
+        }
+        else if(checklogin && userDetails.userType==='patient'){
+            setSearchPatient(userDetails)
+        }
+        else if(checklogin==false){
+            
+            alert('plz login first')
+            navigate('/login/doctor')
+        }
+        initilize=true
+     }
+    },[checklogin ])
+
     return (
+  <>
+        {patientExist&&
         <div className="patientinfobigBox">
             <div className="patientinfobigBox1">
                 <div className="patientinfocontainer">
                     <div className="Pbox1">
                         <div className="Pbox11">
-                            <div className="psamebox"><span>Patient Name : </span> &nbsp;hsbhchbsbjcsbcjs</div>
-                            <div className="psamebox"><span>Phone No &nbsp;: </span> &nbsp;123454322323</div>
-                            <div className="psamebox"><span>Email id &nbsp;: </span> &nbsp;ansdjs@gmail.com</div>
+                            <div className="psamebox"><span>Patient Name : </span> &nbsp;{SearchPatient?.patientname}</div>
+                            <div className="psamebox"><span>Phone No &nbsp;: </span> &nbsp;{SearchPatient?.PhoneNo}</div>
+                            <div className="psamebox"><span>Email id &nbsp;: </span> &nbsp;{SearchPatient?.Email}</div>
                         </div>
                         <div className="Pbox12">
-                            <div className="psamebox"><span>Patient Id &nbsp;: </span> &nbsp;hsbhchbsbjcsbcjs</div>
-                            <div className="psamebox"><span>Gender &nbsp;: </span> &nbsp;123454322323</div>
-                            <div className="psamebox"><span>DOB &nbsp;: </span> &nbsp;1-2-2010</div>
+                            <div className="psamebox"><span>Patient Id &nbsp;: </span> &nbsp;{SearchPatient?.patientID}</div>
+                            <div className="psamebox"><span>Date of Birth &nbsp;: </span> &nbsp;{SearchPatient?.DOB}</div>
+                            <div className="psamebox"><span>Gender &nbsp;: </span> &nbsp;{SearchPatient?.Gender}</div>
                         </div>
-                        <div className="Pbox13">
-                            <div className="psamebox"><span>Patient Address &nbsp;: </span> &nbsp;hsbhchbsbjcsbcjs</div>
-                            <div className="psamebox"><span>State &nbsp;: </span> &nbsp;New delhi</div>
-                            <div className="psamebox"><span>country &nbsp;: </span> &nbsp;India</div>
+                        < div className="Pbox13">
+                            <div className="psamebox"><span>Username&nbsp;: </span> &nbsp;{SearchPatient?.username}</div>
+                            <div className="psamebox"><span>Patient Address &nbsp;: </span> &nbsp;{SearchPatient?.patientAddress}</div>
+                            <div className="psamebox"><span>Total Record &nbsp;: </span> &nbsp;{SearchPatient?.patientRecord.length}</div>
                         </div>
                     </div></div> </div>
             <div className="Pbox2">
@@ -40,24 +97,29 @@ function Info() {
                         <p>More Info</p>
                     </div>
                     <div className="Pbox3"></div>
-                 {/* map function    */}
-                <div className="insidePbox2">
-                        <p className="insidepara">1.</p>
-                        <p>hsdhh</p>
-                        <p>sbdbs</p>
-                        <p>vgsdgse</p>
-                        <p>sdhsh</p>
-                       <p><Link to="/details/patient">See more</Link></p> 
-                    </div>
+                 {SearchPatient?.patientRecord.map((item , index)=>{return(
+                    <div className="insidePbox2">
+                    <p className="insidepara">{index+1}.</p>
+                    <p>{item.diseaseName}</p>
+                    <p>{item.hospitalName}</p>
+                    <p>{item.doctorName}</p>
+                    <p>{item.hospitalId}</p>
+                   <p><Link to={`/details/patient/${item._id}`}  state={{item:item, searchdata:SearchPatient}}>See more</Link></p> 
+                </div>
+                 )})}
+
+                
                     
                   
                 </div>
             </div>
             <div className="Pbox5"></div>
             <div className="Pbox6">
-           <div onClick={()=>{navigate('/upgrade/patient')}}><button type="button" class="btn btn-primary">Add New Patient Disease</button></div> 
+           <div onClick={()=>{navigate('/upgrade/patient' , {state:SearchPatient} ) }} ><button type="button" class="btn btn-primary">Add New Patient Disease</button></div> 
             </div>
         </div>
+        }
+        {patientExist===false&&<NotFound/>}</>
 
     )
 }

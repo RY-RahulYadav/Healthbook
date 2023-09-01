@@ -20,23 +20,30 @@ const patientSchema = new Schema({
         type:String,
         require:true,
     },
+    AdharNo:{
+        type:String,
+        require:true,
+    },
     patientAddress:{
         type:String,
         require:true
     },
-    gender:{
+    Gender:{
         type:String,
         require:true
     },
-    email:{
+    Email:{
         type:String,
         require:true
     },
-    phoneNo:{
-        type:Number,
+    PhoneNo:{
+        type:String,
         require:true
     },
-   
+   DOB:{
+    type:String,
+    require:true
+   },
     password:{
         type:String,
         require:true
@@ -45,10 +52,13 @@ const patientSchema = new Schema({
         hospitalId:String,
         hospitalName:String,
         doctorName:String,
+        HospitalPhoneNo:String,
         diseaseName:String,
         medicineName:String,
         hospitalAddress:String,
         diagnosis:String,
+        Date:String,
+        SpecialCare:String,
         remarks:String
      }]
 

@@ -20,13 +20,15 @@ Router.post('/login',passport.authenticate("local-patient") ,function(req, res, 
 
 Router.post('/signup' , (req, res)=>{
     const patientdetail= new PatientUser({
-        patientId: req.body.patientId,
+        patientId: `P${(req.body.patientname)?.substring(0,4)}${(req.body.AdharNo)?.substring(0,4)}`,
         patientname:req.body.patientname,
         username:req.body.username,
+        AdharNo:req.body.AdharNo,
         patientAddress:req.body.patientAddress,
-        gender:req.body.gender,
-                email:req.body.email,
-                phoneNo:req.body.phoneNo,
+        Gender:req.body.gender,
+        Email:req.body.email,
+        PhoneNo:req.body.phoneNo,
+        DOB:req.body.dateBirth,
        
     })
 
@@ -51,35 +53,7 @@ Router.post('/signup' , (req, res)=>{
     
 })
 
-Router.post("/addpatientDetail" , async (req,res)=>{
-    
-    
-    if(req.isAuthenticated()){
-        try{
 
-            const doc = await PatientUser.findOneAndUpdate({patientId:req.body.patientId} , {$push:{ patientRecord:{
-                hospitalId:req.body.hospitalId,
-                hospitalName:req.body.hospitalName,
-                doctorName:req.body.doctorName,
-                diseaseName:req.body.diseaseName,
-                medicineName:req.body.medicineName,
-                
-                hospitalAddress:req.body.hospitalAddress,
-                diagnosis:req.body.diagnosis,
-                remarks:req.body.remarks
-             }}} , {new:true})
-            
-             res.status(200).json(doc)
-        }
-        catch(err){
-             res.status(500).send(err)
-        }
-    }
-    else{
-        res.status(401).send("unauthorized")
-    }
-
-})
 
 Router.get("/getUser" , (req,res)=>{
   

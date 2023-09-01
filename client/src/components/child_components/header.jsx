@@ -1,11 +1,43 @@
-import { useState } from "react"
+import { useState , useContext, useEffect} from "react"
 import { Link, Outlet, useNavigate } from "react-router-dom"
 import {Optionlogin , OptionSignup} from "./optionModal"
 import Search from "../search"
-
+import { Loginstatus , User } from "./Global_data"
+import LogedIcon from "./loged_icon"
+import { UserType } from "../../App"
 
 function Header() {
+    const [checklogin , setchecklogin] = useContext(Loginstatus);
+    const [userData , setuserData] = useContext(User);
     const [optionmodal , setloginModal ]= useState({type:"" , status:false})
+    const [User_type , setUser_type] = useContext(UserType)
+    useEffect(()=>{
+         const fetchUserData  =  async (url)=>{
+                 const res = await fetch( url , {
+                    method:'get',
+                    headers:{
+                        'content-Type':"application/json"
+                    },
+                    credentials:'include'
+                 })
+                 if(res.status==200){
+                    const user =  await res.json()
+                    setchecklogin(true)
+                    setuserData(user)
+                 }
+                 else{
+                   
+                    setchecklogin(false)
+                 }
+         }
+         if(User_type=="doctor"){
+         fetchUserData("http://localhost:3000/api/auth/doctor/getUser")}
+         else {
+            fetchUserData("http://localhost:3000/api/auth/patient/getUser")
+         }
+    }, [])
+
+console.log(userData)
     // handle  optionlogin and optionsignup modal 
 
     function handleclick(type){
@@ -41,8 +73,10 @@ function Header() {
 
     
     return (
+
         <>
-        <div>
+        
+        {<div><div>
             <nav className="navbar">
                 <div className="container12">
                     <div className="navbar-header">
@@ -51,7 +85,7 @@ function Header() {
                         <ul className="navbar-nav">
                             <li><Link to="/">Home</Link></li>
                             <li ><Link to="">About</Link></li>
-                            <li ><Link to="/search/patient">Search</Link></li>
+                            {(checklogin&&userData.userType=="doctor") &&<li ><Link to="/search/patient">Search</Link></li>}
                             <li><Link to="/contact">contact Us </Link></li>
                            
                         </ul>
@@ -59,10 +93,12 @@ function Header() {
                     </div>
 
                     
-                    <div className="navbar-nav">
-                            <li  onClick={()=>{handleclick("signup")}}><Link >Signup</Link></li>
+                    {checklogin===false && <div className="navbar-nav">
+                            <li  onClick={()=>{handleclick("signup")}}><Link >Signup</Link> </li>
                             <li onClick={()=>{handleclick("login")}}><Link >Login</Link></li>
-                    </div>
+                    </div>}
+                    {checklogin&& <LogedIcon name={userData?.username}/>}
+
                     
                 </div>
             </nav>
@@ -70,7 +106,7 @@ function Header() {
            { optionmodal.status===true &&  (optionmodal?.type==="signup" && < OptionSignup openModalFunction={handleclick} closefunction={closehandleclick} /> )} 
          
         </div>
-        <Outlet/>
+        <Outlet/></div>}
         </>
     )
 }
