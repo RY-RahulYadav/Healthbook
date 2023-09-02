@@ -46,14 +46,10 @@ function About_page() {
                   Make your customers happy by giving services.
                 </h2>
                 <p class="text-body-color mb-8 text-base">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less.
+                Heathbook is a secure online platform designed to help individuals keep track of their healthcare history. Access and manage your previous medical records, including diseases and hospital visits, all in one place. Stay informed about your health journey.
                 </p>
                 <p class="text-body-color mb-12 text-base">
-                  A domain name is one of the first steps to establishing your
-                  brand. Secure a consistent brand image with a domain name that
-                  matches your business.
+                Create a secure account to access your health records. Our login and signup process ensures the confidentiality of your personal information.
                 </p>
                 < Link
                  to="/contact"

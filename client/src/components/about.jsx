@@ -14,7 +14,7 @@ function About(){
                     		<div class="title"><p>About Us</p></div>
                         	<div><h2>Welcome to Heath<span style={{color:' #66f'}}>book</span><br/> </h2></div>
                       
-                         <div class="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</div>
+                         <div class="text">Heathbook is a secure online platform designed to help individuals keep track of their healthcare history. Our website allows you to store and access your previous medical records, making it easier for you and your healthcare providers to make informed decisions about your health. Sign up now and take control of your health. </div>
                         
                         <Link to ="/about" class="theme-btn btn-style-three">Read More</Link>
                   
