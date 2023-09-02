@@ -73,14 +73,14 @@ function Login(props) {
                             <h3>Sign in</h3>
 
 
-                            <form  onSubmit={handlelogin} >
-                                <label for="name">{props.Ltype == "patient" ? "Patient Username" : "Doctor Username"}</label>
+                            <form  method="Post" onSubmit={handlelogin} >
+                                <label for="name">{ props.Ltype == "patient" ? "Patient Username" : "Doctor Username"}</label>
                                 <input onChange={handlechange} type="text" id="name" name="username" />
 
                                 <label for="password">Password</label>
                                 <input onChange={handlechange} type="password" id="password" name="password" />
 
-                                <button type="submit">Log in</button>
+                                <button  type="submit">Log in</button>
                             </form>
 
                             <div class="text-info">
