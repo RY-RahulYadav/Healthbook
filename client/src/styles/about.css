@@ -11,33 +11,37 @@
 	position:relative;
 	padding:120px 0px;
 }
-
+.about-section img{
+    width: 60rem;
+    height: 25rem;
+}
 
 .combinedbox {
 	display: flex ;
 	justify-content: center;
 	align-items: center;
+    /* margin: 1rem 1rem; */
 }
 
 .combinedbox .titlebox{
 	position: relative;
-	top: -2rem;
+	top: -3rem;
     margin-right:5rem;
 
 }
 .combinedbox .titlebox div {
 	
 	margin: 1.2rem;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 }
 .combinedbox .titlebox div p {
 	
 	color: rgb(12, 117, 255);
 	font-weight: 500;
-	font-size: 1.4rem;
+	font-size: 1.7rem;
 }
 .combinedbox .titlebox  .text {
-	font-size:1rem;
+	font-size:1.05rem;
 }
 
 .about-section .btn-style-three {
