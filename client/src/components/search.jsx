@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Loginstatus , User } from "./child_components/Global_data";
+import Footer from "./child_components/footer";
 
 function Search(){
     const navigate = useNavigate()
@@ -29,6 +30,7 @@ function Search(){
             </form>
         </div>
     </div>
+    <Footer/>
         </div>
     )
 }

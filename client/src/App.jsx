@@ -9,6 +9,8 @@ import "./styles/seemore.css"
 import "./styles/upgrade.css"
 import "./styles/search.css"
 import "./styles/notFound.css"
+import "./styles/profile.css"
+
 import Header from './components/child_components/header'
 import Home from './components/home'
 import SignupDoctor from './components/register'
@@ -21,16 +23,19 @@ import UpgradePage from './components/upgrade'
 import GlobalData from './components/child_components/Global_data'
 import NotFound from './components/child_components/not_found'
 import { useEffect, createContext, useState } from 'react'
+import About_page from './components/about_page'
+import ContactPage from './components/contact'
+import Profile from './components/profile'
 
 
-export const UserType = createContext();
+
 function App() {
-     const [User_type , setUser_type] = useState("")
-   
+     
+  
 
   return (
     <>
-    <UserType.Provider value={[User_type , setUser_type]}>
+    
       <GlobalData>
         <Router>
           <Routes>
@@ -40,6 +45,9 @@ function App() {
               <Route path="/details/patient/:id" element={<SeeMore />} />
               <Route path="/upgrade/patient" element={<UpgradePage />} />
               <Route path="/search/patient" element={<Search />} />
+              <Route path="/about" element={<About_page />} />
+              <Route path="/contact" element={<ContactPage/>} />
+              <Route path="/profile" element={<Profile/>} />
             </Route>
             <Route path="/signup/doctor" element={<SignupDoctor Rtype="doctor" />} />
             <Route path="/signup/patient" element={<SignupDoctor Rtype="patient" />} />
@@ -48,7 +56,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
-      </GlobalData></UserType.Provider>
+      </GlobalData>
 
     </>
   )

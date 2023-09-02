@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom"
 import CardSee from "./child_components/card_seemore"
 import NotFound from "./child_components/not_found"
 import { Loginstatus , User } from "./child_components/Global_data";
+import Footer from "./child_components/footer";
 function SeeMore() {
     
 const location =useLocation()
@@ -42,7 +43,7 @@ console.log(state)
                         </div>
                     </div></div></div>
             </div>
-            <div className="Pbox2">
+            <div className="patientinsideBox1">
                 <h2>Details regrading treatment of particular disease</h2>
             </div>
 
@@ -82,7 +83,7 @@ console.log(state)
                 
               
         </div>:<NotFound/>}
-         
+         <Footer/>
         </>
     )
 }

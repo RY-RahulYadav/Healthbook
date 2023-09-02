@@ -4,13 +4,14 @@ import {Optionlogin , OptionSignup} from "./optionModal"
 import Search from "../search"
 import { Loginstatus , User } from "./Global_data"
 import LogedIcon from "./loged_icon"
-import { UserType } from "../../App"
+
 
 function Header() {
     const [checklogin , setchecklogin] = useContext(Loginstatus);
     const [userData , setuserData] = useContext(User);
     const [optionmodal , setloginModal ]= useState({type:"" , status:false})
-    const [User_type , setUser_type] = useContext(UserType)
+
+    const Utype  = localStorage.getItem("Type");
     useEffect(()=>{
          const fetchUserData  =  async (url)=>{
                  const res = await fetch( url , {
@@ -30,12 +31,16 @@ function Header() {
                     setchecklogin(false)
                  }
          }
-         if(User_type=="doctor"){
-         fetchUserData("http://localhost:3000/api/auth/doctor/getUser")}
-         else {
+           
+
+            if(Utype=="doctor"){
+              fetchUserData("http://localhost:3000/api/auth/doctor/getUser")}
+            else {
             fetchUserData("http://localhost:3000/api/auth/patient/getUser")
-         }
-    }, [])
+                 }
+
+        
+    }, [Utype, checklogin])
 
 console.log(userData)
     // handle  optionlogin and optionsignup modal 
@@ -76,7 +81,7 @@ console.log(userData)
 
         <>
         
-        {<div><div>
+        { <div><div>
             <nav className="navbar">
                 <div className="container12">
                     <div className="navbar-header">
@@ -84,20 +89,20 @@ console.log(userData)
                         <div className="navbar-menu" id="open-navbar1">
                         <ul className="navbar-nav">
                             <li><Link to="/">Home</Link></li>
-                            <li ><Link to="">About</Link></li>
-                            {(checklogin&&userData.userType=="doctor") &&<li ><Link to="/search/patient">Search</Link></li>}
-                            <li><Link to="/contact">contact Us </Link></li>
+                            <li ><Link to="/about">About</Link></li>
+                            {(checklogin&&userData.userType=="doctor") && <li ><Link to="/search/patient">Search</Link></li>}
+                            <li><Link to="/contact">Contact Us </Link></li>
                            
                         </ul>
                     </div>
                     </div>
 
                     
-                    {checklogin===false && <div className="navbar-nav">
+                    {checklogin&& <LogedIcon name={userData?.username}/>}
+                    {checklogin==false && <div className="navbar-nav">
                             <li  onClick={()=>{handleclick("signup")}}><Link >Signup</Link> </li>
                             <li onClick={()=>{handleclick("login")}}><Link >Login</Link></li>
                     </div>}
-                    {checklogin&& <LogedIcon name={userData?.username}/>}
 
                     
                 </div>

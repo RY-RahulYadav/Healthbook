@@ -25,9 +25,9 @@ Router.post('/signup' , (req, res)=>{
         username:req.body.username,
         AdharNo:req.body.AdharNo,
         patientAddress:req.body.patientAddress,
-        Gender:req.body.gender,
-        Email:req.body.email,
-        PhoneNo:req.body.phoneNo,
+        Gender:req.body.Gender,
+        Email:req.body.Email,
+        PhoneNo:req.body.PhoneNo,
         DOB:req.body.dateBirth,
        
     })

@@ -5,7 +5,7 @@ import { useSearchParams } from "react-router-dom"
  const Loginstatus = createContext(false);
  const User = createContext({});
 function GlobalData(props){
-      const [checklogin , setchecklogin] = useState();
+      const [checklogin , setchecklogin] = useState(false);
       const [userData , setuserData] = useState({});
 
     return(

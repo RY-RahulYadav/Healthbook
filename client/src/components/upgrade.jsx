@@ -3,6 +3,7 @@ import CardUp from "./child_components/card_upgrade";
 import { useState } from "react";
 import { Loginstatus , User } from "./child_components/Global_data";
 import NotFound from "./child_components/not_found";
+import Footer from "./child_components/footer";
 
 export default function UpgradePage() {
     const navigate = useNavigate();
@@ -85,8 +86,8 @@ async function handleUpdate(e){
                             <div className="psamebox"><span>Total Record &nbsp;: </span> &nbsp;{searchdata?.patientRecord.length}</div>
                         </div>
                     </div></div></div>
-
-                        <div className="Pbox2">
+                    
+                        <div className="patientinsideBox1">
                 <h2> Fill Details regrading treatment of particular disease</h2>
             </div>
             <div className="Sbox5">
@@ -125,7 +126,7 @@ async function handleUpdate(e){
         </form>
     </div>
    </div>:<NotFound type="true"/>}
-   
+   <Footer/>
         </>
     );
 }

@@ -141,7 +141,21 @@ Router.get('/logout', (req, res) => {
 
 })
 
-
+Router.get('/checktype' , (req, res)=>{
+    console.log(req.user)
+  if(req.isAuthenticated() && req.user.userType=="doctor"){
+    res.status(200).json({type:"doctor"})
+  }
+  else if(req.isAuthenticated() && req.user.userType=="patient"){
+    res.status(200).json({type:"patient"})
+  }
+  else if(!req.isAuthenticated()){
+    res.status(401).send("")
+  }
+  else{
+    res.status(500).send("")
+  }
+})
 
 
 module.exports = Router;

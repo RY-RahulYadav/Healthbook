@@ -32,17 +32,21 @@
     font-weight: 300;
 }
 
-.Pbox2{
+.patientinsideBox1{
+    font-size: 2rem;
+    font-weight: 500;
     height: 10vh;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2.9rem;
     text-align: center;
     padding: 2rem;
 
 }
-.Pbox3{
+.patientinsideBox2{
     width: 80vw;
+   
     margin: 0 auto;
-    border: #0f274e solid 1px ;
+    border: #000000 solid 1px ;
 }
 
 .insidePbox{
@@ -72,8 +76,8 @@
 }
 .Pbox6{
 
-    margin:3rem auto;
-    width: 100vw;
+    margin:5rem auto;
+    width: 98vw;
  
     display: flex;
     justify-content: center;

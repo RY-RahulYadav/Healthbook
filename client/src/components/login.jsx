@@ -1,12 +1,12 @@
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Header from "./child_components/header"
 import { useEffect, useState , useContext} from "react"
 import { Loginstatus , User } from "./child_components/Global_data";
-import { UserType } from "../App";
+
 function Login(props) {
     const navigate = useNavigate();
     const [checklogin , setchecklogin] = useContext(Loginstatus);
-    const [User_type , setUser_type] = useContext(UserType)
+  
     const [loginDetails, setloginDetails] = useState({
         username: '',
         password: ''
@@ -34,8 +34,8 @@ function Login(props) {
             password: loginDetails?.password
         }
         
-if(props.Ltype=='doctor'){
-        const res = await fetch('http://localhost:3000/api/auth/doctor/login', {
+
+        const res = await fetch(`http://localhost:3000/api/auth/${props.Ltype}/login`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,35 +44,21 @@ if(props.Ltype=='doctor'){
             credentials: 'include'
         })
         if (res.status == 200) {
-            setUser_type("doctor")
+            localStorage.clear();
+            localStorage.setItem("Type", props.Ltype);
+            
             alert("successfully login")
             navigate('/');
         }
         else {
+            localStorage.setItem("Type", null);
             alert('plz enter valid credentials , Login Again ')
-            navigate('/login/doctor');
+            navigate(`/login/${props.Ltype}`);
         }
+    
+    
     }
-    else{
-        const res = await fetch('http://localhost:3000/api/auth/patient/login', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(data),
-            credentials: 'include'
-        })
-        if (res.status == 200) {
-            setUser_type("patient")
-            alert("successfully login")
-            navigate('/');
-        }
-        else {
-            alert('plz enter valid credentials , Login Again ')
-            navigate('/login/patient');
-        }
-    }
-    }
+    
 
     return (
         <>
@@ -98,7 +84,7 @@ if(props.Ltype=='doctor'){
                             </form>
 
                             <div class="text-info">
-                                <a href="#">Forgot password?</a>
+                                <Link to ="/">Back to Home</Link>
 
                             </div></div>
                     </div>

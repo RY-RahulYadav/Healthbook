@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function About(){
     return(
         <div className="aboutsectionBox1" id="hdhjs12">
@@ -14,7 +16,7 @@ function About(){
                       
                          <div class="text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</div>
                         
-                        <a href="about.html" class="theme-btn btn-style-three">Log in</a>
+                        <Link to ="/about" class="theme-btn btn-style-three">Read More</Link>
                   
                 </div>
                 

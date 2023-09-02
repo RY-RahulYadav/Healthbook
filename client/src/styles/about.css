@@ -5,7 +5,7 @@
     background-color: rgb(22, 12, 40);
     margin: auto;
     width: 100vw;
-    height: 80vh;
+    height: 60vh;
     color: white;
 
 	position:relative;
@@ -41,6 +41,7 @@
 }
 
 .about-section .btn-style-three {
+    top: 2rem;
 	left: 1.2rem;
     position: relative;
     /* line-height: 24px; */
@@ -54,4 +55,5 @@
     /* text-transform: capitalize; */
     border: 2px solid #ffffff;
     font-family: 'Arimo', sans-serif;
+    
 }

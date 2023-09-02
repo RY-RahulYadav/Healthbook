@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import { Loginstatus , User } from "./child_components/Global_data";
 import { Navigate, useNavigate } from "react-router-dom";
-import { UserType } from "../App";
+
 function RegisterDoctor(props) {
     const navigate = useNavigate();
     const registerType = props.Rtype;
     const [checklogin , setchecklogin] = useContext(Loginstatus);
     const [userData , setuserData] = useContext(User);
-    const [User_type , setUser_type] = useContext(UserType)
+   
     const [registerDetails , setRegisterdetails] =useState({
         Fname :'',
         Lname:'',
@@ -22,14 +22,7 @@ function RegisterDoctor(props) {
        
 
     })
-    // DoctorId:`D${ubstring(0,4)}${req.boby.adharNo.substring(0,4)}`,
-    // Doctorname:name,
-    // AdharNo:o,
-    // username:me,
-    // gender:,
-    // HospitalAddress:alAddress,
-    // email:
-    // phoneNo:o,
+   
 
     function handlechange(e){
     
@@ -45,9 +38,21 @@ function RegisterDoctor(props) {
 
    async function handleregister(e){
         e.preventDefault()
-        console.log(registerDetails)
-        if(registerType=="doctor"){
-        const data ={
+         
+        const Pdata ={
+            patientname:`${registerDetails?.Fname} ${registerDetails?.Lname}`,
+            AdharNo:registerDetails?.AdharNo,
+            username:registerDetails?.Username,
+            Gender:registerDetails?.Gender,
+            patientAddress:registerDetails?.Address,
+            dateBirth:registerDetails?.dateBirth,
+            Email:registerDetails?.Email,
+            PhoneNo:registerDetails?.PhoneNo,
+            password:registerDetails?.Password
+
+        }
+       
+        const Ddata ={
             Doctorname:`${registerDetails?.Fname} ${registerDetails?.Lname}`,
             AdharNo:registerDetails?.AdharNo,
             username:registerDetails?.Username,
@@ -61,8 +66,8 @@ function RegisterDoctor(props) {
 
         }
         
-
-        const res = await fetch('http://localhost:3000/api/auth/doctor/signup' ,{
+        const data = registerType=="doctor"?Ddata:Pdata
+        const res = await fetch(`http://localhost:3000/api/auth/${registerType}/signup` ,{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -71,62 +76,30 @@ function RegisterDoctor(props) {
             credentials:'include'
         })
        if(res.status==200){
+        localStorage.clear();
+        localStorage.setItem("Type", registerType);
         setchecklogin(true)
-        setUser_type("doctor")
+       
         alert("successfully signup")
         navigate('/')
        }
        else if(res.status==409){
+        localStorage.setItem("Type", null);
         setchecklogin(false)
         alert("user already exist , plz signup with unique Username")
-        navigate('/signup/doctor');
+        navigate(`/signup/doctor${registerType}`);
        }
        else{
+        localStorage.setItem("Type", null);
         setchecklogin(false)
         alert("Server error , Plz try again after some time ")
         navigate('/');
        }
     }
-    else{
-        const data ={
-            patientname:`${registerDetails?.Fname} ${registerDetails?.Lname}`,
-            AdharNo:registerDetails?.AdharNo,
-            username:registerDetails?.Username,
-            Gender:registerDetails?.Gender,
-            patientAddress:registerDetails?.Address,
-            dateBirth:registerDetails?.dateBirth,
-            Email:registerDetails?.Email,
-            PhoneNo:registerDetails?.PhoneNo,
-            password:registerDetails?.Password
-
-        }
-        const res = await fetch('http://localhost:3000/api/auth/patient/signup' ,{
-            method:'POST',
-            headers:{
-                'content-type':'application/json'
-            },
-            body:JSON.stringify(data),
-            credentials:'include'
-        })
-
-        if(res.status==200){
-            setchecklogin(true)
-            setUser_type("patient")
-            alert("succesfully signup")
-            navigate('/')
-           }
-        else if(res.status==409){
-            setchecklogin(false)
-            alert("user already exist , plz signup with unique Username")
-            navigate('/signup/doctor');
-        }
-           else{
-            setchecklogin(false)
-            alert("Server error , Plz try again after some time ")
-            navigate('/');
-           }
-    }
-    }
+  
+      
+    
+    
 
 
 
@@ -173,7 +146,7 @@ function RegisterDoctor(props) {
                         </div>
                         <div className="inputfield">
                             <label>Phone Number</label>
-                            <input onChange={handlechange} type="text" className="input"  name="PhoneNo" />
+                            <input onChange={handlechange} type="number" className="input"  name="PhoneNo" />
                         </div>
                         {registerType=="doctor" &&<div className="inputfield">
                             <label>Hospital/Clinic Name</label>

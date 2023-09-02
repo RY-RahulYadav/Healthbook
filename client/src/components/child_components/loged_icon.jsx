@@ -18,6 +18,8 @@ async function handlelogout(){
     })
     if(res.status==200){
         alert("successfully logout");
+        localStorage.setItem("Type", null);
+
         setchecklogin(false)
         setuserData({})
         
@@ -33,13 +35,13 @@ async function handlelogout(){
         <div className="logedcontainer">
         <div className="dropdown ">
         <div className=" logediconbox " data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="userIcon.png" alt="" />           
+        <img src="../../public/userIcon.png" alt="" />           
         <p>{props.name}</p>
         
         </div>
         <ul className="dropdown-menu">
-    <li><Link className="dropdown-item" href="#">Profile</Link></li>
-    <li><Link className="dropdown-item" to={`/info/patient/${userData?.patientId}`}>Your Record</Link></li>
+    <li><Link className="dropdown-item" to='/profile'>Profile</Link></li>
+   {userData.userType=="patient"? <li><Link className="dropdown-item" to={`/info/patient/${userData?.patientId}`}>Your Record</Link></li>:<li><Link className="dropdown-item" to="/search/patient">Search Patient</Link></li>}
     <li onClick={handlelogout}><Link  className="dropdown-item" href="#">Logout</Link></li>
   </ul></div></div>
     
