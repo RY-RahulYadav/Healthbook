@@ -3,10 +3,11 @@
 
 .about-section{
     background-color: rgb(22, 12, 40);
-    margin: auto;
+    background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+    margin:  auto;
     width: 100vw;
     
-    color: white;
+    color: rgb(255, 255, 255);
 
 	position:relative;
 	padding:120px 0px;
@@ -14,6 +15,11 @@
 .about-section img{
     width: 60rem;
     height: 25rem;
+}
+
+.aboutcontainer{
+    margin: auto;
+    width: 80vw;
 }
 
 .combinedbox {
@@ -49,15 +55,15 @@
 	left: 1.2rem;
     position: relative;
     /* line-height: 24px; */
-    color: hsl(0, 0%, 15%);
+    color: hsl(224, 73%, 35%);
     font-size: 18px;
     font-weight: 700;
     background: none;
     /* display: inline-block; */
     padding: 11px 40px;
-    background-color: #ffffff;
+    background-color: #ededee;
     /* text-transform: capitalize; */
-    border: 2px solid #ffffff;
+    border: 2px solid #ccc8c8;
     font-family: 'Arimo', sans-serif;
     
 }

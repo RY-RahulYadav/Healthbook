@@ -1,21 +1,57 @@
 export default function Section2(){
     return(
-        <div>
-            <div className="sm:flex justify-center items-center relative w-10/12 left-36" style={{}}> 
-    <div className="sm:w-1/2 p-10">
-            <div className="image object-center text-center">
-              <img src="https://samviddhi.com/icon/Layer_1.png" alt="" />
+        <div className="iconBoxsection">
+            <div class="row">
+	<div class="col-sm-3">	
 
-            </div>
-    </div>
-    <div className="sm:w-1/2 p-5">
-        <div className="text">
-            <span className="text-gray-500 border-b-2 border-indigo-600 uppercase">Heathbook</span>
-            <h2 className="my-4 font-bold text-3xl  sm:text-4xl ">Provide <span className="text-indigo-600">Health Records</span></h2>
-            <p className="text-gray-700">Manage your healthcare records efficiently with Heathbook. Keep track of your medical history, diseases, and hospital visits all in one place. Sign up today and take control of your health .</p>
-        </div>
-    </div>
+		<div class="item-featured-round">
+			<span class="iconwrap" style={{backgroundColor:"rgb(216, 34, 86)"}}>
+			<i class="fa-solid fa-house-medical" style={{color: "#ffffff;"}}></i>
+				<span class="iconhover" style={{borderColor:"#E74C3C"}}></span>
+			</span>
+			<h3>Heathbook</h3>
+			<p> Heathbook is a secure  platform designed to  keep track of their healthcare history. </p>
+		</div>
+
+	</div>
+	<div class="col-sm-3">	
+
+	<div class="item-featured-round">
+		<span class="iconwrap" style={{backgroundColor:"rgb(51, 51, 122)"}}>
+		<i class="fa-solid fa-list"></i>
+			<span class="iconhover" style={{borderColor:"#E67E22"}}></span>
+		</span>
+		<h3>Previous Records</h3>
+		<p> Manage your healthcare records efficiently with Heathbook. Keep track of your medical history .</p>
+	</div>
+
+	</div>
+	<div class="col-sm-3">
+
+	<div class="item-featured-round">
+		<span class="iconwrap" style={{backgroundColor:"orange"}}>
+		<i class="fa-solid fa-file-shield"></i>
+			<span class="iconhover" style={{borderColor:"orange"}}></span>
+		</span>
+		<h3>Secure and Safe</h3>
+		<p>Heathbook ensures that user data is protected from unauthorized access</p>
+	</div>
+
+	</div>
+    <div class="col-sm-3">
+
+		<div class="item-featured-round">
+			<span class="iconwrap" style={{backgroundColor:"#F18CAA"}}>
+			<i class="fa-solid fa-user"></i>
+				<span class="iconhover" style={{borderColor:"#F18CAA"}}></span>
+			</span>
+			<h3>Easy to Use</h3>
+			<p>An intuitive, user-friendly interface ensures a seamless and efficient experience.</p>
+		</div>
+
+	</div>
 </div>
+
         </div>
     )
 }

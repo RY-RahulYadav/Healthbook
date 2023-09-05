@@ -10,7 +10,8 @@ import "./styles/upgrade.css"
 import "./styles/search.css"
 import "./styles/notFound.css"
 import "./styles/profile.css"
-
+import "./styles/section2.css"
+import "./styles/section3.css"
 import Header from './components/child_components/header'
 import Home from './components/home'
 import SignupDoctor from './components/register'

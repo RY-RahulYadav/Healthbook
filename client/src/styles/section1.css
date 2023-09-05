@@ -1,58 +1,73 @@
 
-.sectionBox1{
+.section3container{
+    width: 100vw;
+    height: 60vh;
+    background:   url("/section3.jpeg")  no-repeat center center/cover;
     
-    width: 85vw;
-    margin: auto;
-    margin: 10rem auto;
+    margin-bottom: 2rem;
+}
+
+
+.sectionBox3{
+    
+    width: 80vw;
+    /* margin: auto; */
+    /* margin: 10rem auto; */
     
     display: flex;
 
 }
 
-.sectionBox1 .healthTitle{
+.sectionBox3 .healthTitle{
     position: relative;
-    top: 5rem;
-    left: 3rem;
+    top: 8rem;
+    left: 10rem;
 width: 35vw ;
+color: white;
 
 }
-.sectionBox1 .healthTitle p{
+.sectionBox3 .healthTitle p{
     margin-top: 2rem;
    font-size: 1.4rem;
 
 }
-.sectionBox1 .heathname1{
+.sectionBox3 .heathname1{
     font-size: 4rem;
     width: 30vw;
+    
 }
-.sectionBox1 .heathname2 {
+.sectionBox3 .heathname2 {
     font-size: 5rem;
-    width: 30vw;
+    width: 45vw;
+    overflow: hidden; 
+ 
+  white-space: nowrap; 
+  letter-spacing: .11em; 
+  border-right: 5px solid rgb(255, 255, 255);
+  animation: typewriter 3s  steps(44) 0s 1 normal both,
+  blinkTextCursor 500ms steps(44) infinite;
+
+
+  
+  
+  
+
 }
-.sectionBox1 .heathname2   span {
+.sectionBox3 .heathname2   span {
 
     color: rgb(94, 94, 255);
   }
-
-  .sectionBox1 .heathimgsection{
  
 
-}
-.sectionBox1 .heathimgsection .img1{
-    width: 32rem;
-    height: 32rem;
-    position: relative;
-    top: -5rem;
-    left: 5rem;
-    border-radius: 50%;
-    z-index: 50;
-}
-.sectionBox1 .heathimgsection .img2{
-    width: 22rem;
-    height: 22rem;
-    position: relative;
-    top: 5rem;
-    left: 0rem;
-    border-radius: 50%;
-    z-index: -1;
-}
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 100%;border-right: 0px solid transparent; }
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+  
+  @media screen and (width:900px){
+    
+  }

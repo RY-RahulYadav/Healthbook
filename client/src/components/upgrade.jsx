@@ -76,7 +76,7 @@ async function handleUpdate(e){
                             <div className="psamebox"><span>Email id &nbsp;: </span> &nbsp;{searchdata?.Email}</div>
                         </div>
                         <div className="Pbox12">
-                            <div className="psamebox"><span>Patient Id &nbsp;: </span> &nbsp;{searchdata?.patientID}</div>
+                            <div className="psamebox"><span>Patient Id &nbsp;: </span> &nbsp;{searchdata?.patientId}</div>
                             <div className="psamebox"><span>Date of Birth &nbsp;: </span> &nbsp;{searchdata?.DOB}</div>
                             <div className="psamebox"><span>Gender &nbsp;: </span> &nbsp;{searchdata?.Gender}</div>
                         </div>
@@ -91,9 +91,9 @@ async function handleUpdate(e){
                 <h2> Fill Details regrading treatment of particular disease</h2>
             </div>
             <div className="Sbox5">
-                    <CardUp title="Disease Name " type='text' name = "diseaseName" Inputhandle={handlechange} />
                     <CardUp title="Hospital Name" type='text' name ="hospitalName" Inputhandle={handlechange}/>
                     <CardUp title="Hospital Id " type='text' name ="hospitalId" Inputhandle={handlechange}/>
+                    <CardUp title="Hospital Address" type='text' name = "hospitalAddress" Inputhandle={handlechange} />
                 </div>  
                 <div className="Sbox5">
                     <CardUp title="Doctor Name" type='text' name ="doctorName" Inputhandle={handlechange}/>
@@ -104,8 +104,8 @@ async function handleUpdate(e){
                 <div class="form-container">
         <form  method="post" >
             <div class="input-group">
-                <span class="input-group-text dig txt-col-white spanTitle" >Hospital Address</span>
-                <textarea onChange={handlechange} class="form-control dig" aria-label="With textarea" name="hospitalAddress" ></textarea>
+                <span class="input-group-text dig txt-col-white spanTitle" >Disease Name</span>
+                <textarea onChange={handlechange} class="form-control dig" aria-label="With textarea" name="diseaseName" ></textarea>
             </div><br/>
             <div class="input-group">
                 <span class="input-group-text dig txt-col-white spanTitle"  >Diagnosis</span>

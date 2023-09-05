@@ -7,21 +7,9 @@ function SeeMore() {
     
 const location =useLocation()
 const state= location.state
-console.log(state)
-
-
-
-    // hospitalId:String,
-    // hospitalName:String,
-    // doctorName:String,
-    // diseaseName:String,
-    // medicineName:String,
-    // hospitalAddress:String,
-    // diagnosis:String,
-    // remarks:String
     return (
         <>
-       {state ? <div>
+       { state ? <div>
             <div className="seemoreBox1">
                 <div className="patientinfobigBox1">
                     <div className="patientinfocontainer">
@@ -32,7 +20,7 @@ console.log(state)
                             <div className="psamebox"><span>Email id &nbsp;: </span> &nbsp;{state?.searchdata?.Email}</div>
                         </div>
                         <div className="Pbox12">
-                            <div className="psamebox"><span>Patient Id &nbsp;: </span> &nbsp;{state?.searchdata?.patientID}</div>
+                            <div className="psamebox"><span>Patient Id &nbsp;: </span> &nbsp;{state?.searchdata?.patientId}</div>
                             <div className="psamebox"><span>Date of Birth &nbsp;: </span> &nbsp;{state?.searchdata?.DOB}</div>
                             <div className="psamebox"><span>Gender &nbsp;: </span> &nbsp;{state?.searchdata?.Gender}</div>
                         </div>

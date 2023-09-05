@@ -9,13 +9,13 @@ body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden; 
     box-sizing: border-box;
-  /* width: 100vw; */
-  /* font-size: 0.925rem; */
+    
+    /* background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% ); */
 }
 
 
 html{
-  font-size: 2vh;
+  font-size: 1vw
 }
 a {
     text-decoration: none;
@@ -34,7 +34,7 @@ a {
    height: 5rem;
     
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    background-color: #fff;
+    background-color: #ffffff;
     /* padding: 1rem 1.15rem; */
     border-bottom: 1px solid #eceef3;
    
@@ -116,3 +116,61 @@ a {
   .logedcontainer .dropdown-menu a{
     color: #eceef3;
   }
+
+
+
+.smallscreenhide{
+  display: block;
+}
+.largescreenhide{
+  display: none;
+}
+
+
+@media screen and (max-width: 900px){
+  .navbar {
+    height: 9rem;  
+   }
+   .navbar-nav  li a {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+ 
+  }
+  .navbar-header h4{
+ 
+    font-size: 1.9rem;
+
+  }
+  
+}
+
+@media screen and (max-width: 700px){
+  .navbar {
+    height: 11rem; 
+   
+   }
+   .container12{
+    width: 90vw;
+   }
+   .navbar-nav  li a {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+ 
+  }
+  .navbar-header h4{
+ 
+    font-size: 2.4rem;
+    margin-right: 1rem;
+
+  }
+  
+}
+@media screen and (max-width:600px) {
+  .largescreenhide{
+    display: block;
+  }
+  .smallscreenhide{
+    display: none;
+  }
+}

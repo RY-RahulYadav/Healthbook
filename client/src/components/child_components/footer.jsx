@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   function   handleFuntion(){
-      alert("this page is not available")
+      alert( "this page is not available")
     }
     return (
       <>
-        <footer className="bg-[#160c28] mt-32">
-          <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <footer className="bg-[#160c28] " style={{backgroundImage:"linear-gradient( 111.4deg,  rgb(22, 22, 36) 6.5%, rgb(7, 5, 49) 93.2% )"}}>
+          <div className="mx-auto w-10/12 max-w-screen-xl p-4 py-6 lg:py-8">
             <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0">
                 <Link to='/' className="flex items-center">

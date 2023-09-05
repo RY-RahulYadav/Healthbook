@@ -4,7 +4,7 @@ function About(){
     return(
         <div className="aboutsectionBox1" id="hdhjs12">
             <section class="about-section">
-    	<div class="container">
+    	<div class="aboutcontainer">
         	<div class="combinedbox "  >
             	
              

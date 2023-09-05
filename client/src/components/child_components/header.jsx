@@ -6,6 +6,7 @@ import { Loginstatus , User } from "./Global_data"
 import LogedIcon from "./loged_icon"
 
 
+
 function Header() {
     const [checklogin , setchecklogin] = useContext(Loginstatus);
     const [userData , setuserData] = useContext(User);
@@ -81,7 +82,7 @@ console.log(userData)
 
         <>
         
-        { <div><div>
+         <div><div className="smallscreenhide">
             <nav className="navbar">
                 <div className="container12">
                     <div className="navbar-header">
@@ -111,7 +112,16 @@ console.log(userData)
            { optionmodal.status===true &&  (optionmodal?.type==="signup" && < OptionSignup openModalFunction={handleclick} closefunction={closehandleclick} /> )} 
          
         </div>
-        <Outlet/></div>}
+
+
+
+
+
+
+
+   
+
+        <Outlet/></div>
         </>
     )
 }
