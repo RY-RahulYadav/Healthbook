@@ -119,14 +119,6 @@ a {
 
 
 
-.smallscreenhide{
-  display: block;
-}
-.largescreenhide{
-  display: none;
-}
-
-
 @media screen and (max-width: 900px){
   .navbar {
     height: 9rem;  
@@ -165,12 +157,4 @@ a {
 
   }
   
-}
-@media screen and (max-width:600px) {
-  .largescreenhide{
-    display: block;
-  }
-  .smallscreenhide{
-    display: none;
-  }
 }

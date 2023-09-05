@@ -7,8 +7,8 @@ const Router = express.Router();
 
 
 
-
-Router.post('/login',passport.authenticate("local-patient") ,function(req, res, next) {
+// login route 
+Router.post('/login',passport.authenticate("local-patient") ,function(req, res) {
 
    res.status(200).send("succesfully login")
   })
@@ -16,7 +16,7 @@ Router.post('/login',passport.authenticate("local-patient") ,function(req, res, 
 
 
 
-// })
+// signup route 
 
 Router.post('/signup' , (req, res)=>{
     const patientdetail= new PatientUser({
@@ -34,7 +34,7 @@ Router.post('/signup' , (req, res)=>{
 
     PatientUser.register( patientdetail ,  req.body.password , (err , user )=>{
      if(err){
-        console.log(err)
+        
         res.status(500).send(err)
      }
      else{
@@ -54,7 +54,7 @@ Router.post('/signup' , (req, res)=>{
 })
 
 
-
+// get patient user route  
 Router.get("/getUser" , (req,res)=>{
   
     if(req.isAuthenticated() && req.user.userType==="patient"){
@@ -66,6 +66,8 @@ Router.get("/getUser" , (req,res)=>{
    
 })
 
+
+// logout route 
 Router.get('/logout' , (req, res)=>{
     if(req.isAuthenticated()){
         req.logout((err)=>{

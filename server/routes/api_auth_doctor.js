@@ -8,13 +8,13 @@ const PatientUser = require('../modals/patientSchema.js');
 
 
 
-
-Router.post('/login', passport.authenticate("local-doctor"), function (req, res, next) {
+// login route 
+Router.post('/login', passport.authenticate("local-doctor"), function (req, res) {
 
     res.status(200).send("successfully login")
 })
 
-
+// signup route 
 Router.post('/signup', async (req, res) => {
 
     const doctordetail = new DoctorUser({
@@ -65,8 +65,10 @@ Router.post('/signup', async (req, res) => {
 
 })
 
+
+// get doctoe details route
 Router.get("/getUser", (req, res) => {
-    console.log(req.user)
+    
     if (req.isAuthenticated() && req.user.userType === "doctor") {
         res.status(200).json(req.user);
     }
@@ -75,6 +77,8 @@ Router.get("/getUser", (req, res) => {
     }
 
 })
+
+// search patient details route
 Router.post("/search/patient" , async (req, res)=>{
    
     if(req.isAuthenticated() && req.user.userType==="doctor"){
@@ -92,6 +96,8 @@ Router.post("/search/patient" , async (req, res)=>{
     }
 })
 
+
+// update patient details route 
 Router.post("/addpatientDetail" , async (req,res)=>{
     
     
@@ -124,6 +130,7 @@ Router.post("/addpatientDetail" , async (req,res)=>{
 
 })
 
+// logout route 
 Router.get('/logout', (req, res) => {
     if (req.isAuthenticated()) {
         req.logout((err) => {
@@ -141,21 +148,7 @@ Router.get('/logout', (req, res) => {
 
 })
 
-Router.get('/checktype' , (req, res)=>{
-    console.log(req.user)
-  if(req.isAuthenticated() && req.user.userType=="doctor"){
-    res.status(200).json({type:"doctor"})
-  }
-  else if(req.isAuthenticated() && req.user.userType=="patient"){
-    res.status(200).json({type:"patient"})
-  }
-  else if(!req.isAuthenticated()){
-    res.status(401).send("")
-  }
-  else{
-    res.status(500).send("")
-  }
-})
+
 
 
 module.exports = Router;
