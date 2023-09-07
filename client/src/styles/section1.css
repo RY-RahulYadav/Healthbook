@@ -1,7 +1,7 @@
 
 .section3container{
     width: 100vw;
-    height: 60vh;
+    /* height: 60vh; */
     background:   url("/section3.jpeg")  no-repeat center center/cover;
     
     margin-bottom: 2rem;
@@ -20,19 +20,20 @@
 
 .sectionBox3 .healthTitle{
     position: relative;
-    top: 8rem;
+    top: 6rem;
     left: 10rem;
-width: 35vw ;
+width: 35rem ;
+height: 30rem;
 color: white;
 
 }
 .sectionBox3 .healthTitle p{
-    margin-top: 2rem;
-   font-size: 1.4rem;
+    margin-top: 1rem;
+   font-size: 1.3rem;
 
 }
 .sectionBox3 .heathname1{
-    font-size: 4rem;
+    font-size: 3.8rem;
     width: 30vw;
     
 }
@@ -68,6 +69,37 @@ color: white;
     to{border-right-color: transparent;}
   }
   
-  @media screen and (width:900px){
-    
+  @media screen and  (max-width:600px){
+    .sectionBox3{
+      height: 65rem;
+    }
+    .sectionBox3 .healthTitle{
+      position: relative;
+      top: 15rem;
+      left: 10rem;
+  width: 65rem ;
+  height:60rem;
+  color: white;
+  
   }
+  .sectionBox3 .heathname1{
+    font-size: 7.9rem;
+    width: 60vw;
+    
+}
+.sectionBox3 .heathname2{
+  font-size: 8.8rem;
+  width: 60vw;
+  
+}
+.sectionBox3 .healthTitle p{
+  margin-top: 2rem;
+ font-size: 2.7rem;
+
+}
+.section3container{
+  margin-bottom: 0;
+}
+
+
+}

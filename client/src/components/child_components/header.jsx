@@ -4,7 +4,7 @@ import {Optionlogin , OptionSignup} from "./optionModal"
 import Search from "../search"
 import { Loginstatus , User } from "./Global_data"
 import LogedIcon from "./loged_icon"
-
+import ResNav from "./resNav"
 
 
 function Header() {
@@ -76,7 +76,28 @@ console.log(userData)
                 status:false
             })
     }
+    async function handlelogout(){
 
+        const res =  await fetch(`http://localhost:3000/api/auth/${userData?.userType}/logout` ,{
+            method:'GET',
+            headers:{
+                "content-type":"application/json"
+            },
+            credentials:'include'
+        })
+        if(res.status==200){
+            alert("successfully logout");
+            localStorage.setItem("Type", null);
+    
+            setchecklogin(false)
+            setuserData({})
+            
+    
+        }
+        else {
+            alert("server error")
+        }
+    }
     
     return (
 
@@ -99,7 +120,7 @@ console.log(userData)
                     </div>
 
                     
-                    {checklogin&& <LogedIcon name={userData?.username}/>}
+                    {checklogin&& <LogedIcon name={userData?.username} logoutFunc={handlelogout}/>}
                     {checklogin==false && <div className="navbar-nav">
                             <li  onClick={()=>{handleclick("signup")}}><Link >Signup</Link> </li>
                             <li onClick={()=>{handleclick("login")}}><Link >Login</Link></li>
@@ -108,10 +129,10 @@ console.log(userData)
                     
                 </div>
             </nav>
-           { optionmodal.status===true &&  (optionmodal?.type==="login" && < Optionlogin openModalFunction={handleclick} closefunction={closehandleclick} /> )}
-           { optionmodal.status===true &&  (optionmodal?.type==="signup" && < OptionSignup openModalFunction={handleclick} closefunction={closehandleclick} /> )} 
          
         </div>
+           { optionmodal.status===true &&  (optionmodal?.type==="login" && < Optionlogin openModalFunction={handleclick} closefunction={closehandleclick} /> )}
+           { optionmodal.status===true &&  (optionmodal?.type==="signup" && < OptionSignup openModalFunction={handleclick} closefunction={closehandleclick} /> )} 
 
 
 
@@ -119,7 +140,7 @@ console.log(userData)
 
 
 
- 
+   <div className="largescreenhide"><ResNav openModalFunction={handleclick} closefunction={closehandleclick} logoutFunc={handlelogout}/></div>
 
         <Outlet/></div>
         </>

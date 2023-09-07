@@ -17,10 +17,10 @@ function Section3(){
         </div>
         
         
-        </div> <div className="sectionbigBox" style={{background:'white'}}>
+        </div> <div className="sectionbigBox2">
         <div className="sectionBox1">
 
-            <div className="healthTitle" style={{color:"black" }}>
+            <div className="healthTitle2" >
                  <h1 className="heathname1">AND LET'S NOT FORGET</h1><h1 className="heathname2">Secure Login and Signup</h1>
                  <p>Create a secure account to access your health records. Our login and signup process ensures the confidentiality of your personal information.</p>
             </div>

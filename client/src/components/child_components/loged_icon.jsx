@@ -7,28 +7,7 @@ function LogedIcon(props){
 const [checklogin , setchecklogin] = useContext(Loginstatus)
 const [userData , setuserData] =useContext(User)
 
-async function handlelogout(){
 
-    const res =  await fetch(`http://localhost:3000/api/auth/${userData?.userType}/logout` ,{
-        method:'GET',
-        headers:{
-            "content-type":"application/json"
-        },
-        credentials:'include'
-    })
-    if(res.status==200){
-        alert("successfully logout");
-        localStorage.setItem("Type", null);
-
-        setchecklogin(false)
-        setuserData({})
-        
-
-    }
-    else {
-        alert("server error")
-    }
-}
 
     return(
         <>
@@ -42,7 +21,7 @@ async function handlelogout(){
         <ul className="dropdown-menu">
     <li><Link className="dropdown-item" to='/profile'>Profile</Link></li>
    {userData.userType=="patient"? <li><Link className="dropdown-item" to={`/info/patient/${userData?.patientId}`}>Your Record</Link></li>:<li><Link className="dropdown-item" to="/search/patient">Search Patient</Link></li>}
-    <li onClick={handlelogout}><Link  className="dropdown-item" href="#">Logout</Link></li>
+    <li onClick={()=>{props.logoutFunc()}}><Link  className="dropdown-item" href="#">Logout</Link></li>
   </ul></div></div>
     
         

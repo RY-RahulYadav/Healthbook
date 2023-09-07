@@ -13,7 +13,10 @@ body {
     /* background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% ); */
 }
 
-
+#root{
+  width: 100vw;
+  overflow-x: hidden;
+}
 html{
   font-size: 1vw
 }
@@ -119,6 +122,14 @@ a {
 
 
 
+.smallscreenhide{
+  display: block;
+}
+.largescreenhide{
+  display: none;
+}
+
+
 @media screen and (max-width: 900px){
   .navbar {
     height: 9rem;  
@@ -157,4 +168,123 @@ a {
 
   }
   
+}
+@media screen and (max-width:600px) {
+  .largescreenhide{
+    display: block;
+  }
+  .smallscreenhide{
+    display: none;
+  }
+  .resNav{
+    height: 16rem;
+  }
+ .resNav nav{
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5.2rem;
+ }
+ .resNav nav h4{
+  font-size:4.7rem;
+  font-weight: 500;
+ }
+  
+ .resNav nav i{
+  font-size: 3.8rem;
+font-weight: bold;
+ }
+ .resNav h4 span {
+
+  color: #66f;
+}
+.resNav .openResNav{
+  background-color: rgb(0, 0, 0);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 100vh;
+  
+}
+.openResNav .opeRasNavBox1{
+  width: 85%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+  padding-top: 5rem;
+  color: aliceblue;
+}
+.opeRasNavBox1 .logobox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logobox img{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-right: 2.5rem;
+
+}
+.logobox p{
+  font-size: 4.2rem;
+}
+.opeRasNavBox1 i{
+ font-size: 4.5rem;
+ margin-right: 3rem;
+}  
+.opeRasNavBox2{
+  color: #ffffff;
+  margin-top: 15rem;
+  margin-left: 15rem;
+}
+.opeRasNavBox2 li{
+  list-style: none;
+  margin: 10rem 0;
+  display: flex;
+
+  align-items: center;
+}
+.opeRasNavBox2 li img{
+  width: 5rem;
+  height: 5rem;
+  margin-right: 4rem;
+  border-radius: 50%;
+  filter: invert();
+}
+.opeRasNavBox2 li i{
+  font-size: 3rem;
+  margin-right: 4rem;
+}
+.opeRasNavBox2 li a{
+  color: #ffffff;
+  font-size: 4rem;
+}
+
+/* footer css */
+.footerbox {
+  height: 70rem;
+  padding: 5rem;
+}
+.footerbox a , .footerbox h2, .footerbox span{
+font-size: 2.5rem;
+margin-bottom: 3rem;
+}
+.footerbox hr{
+  margin: 4rem 0;
+}
+.footerbox svg{
+ width: 4rem;
+ height: 4rem;
+ margin: 3rem 0;
+ margin-right: 3rem;
+ 
+}
 }

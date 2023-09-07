@@ -4,6 +4,7 @@ import Footer from "./child_components/footer";
 function About_page() {
   return (
     <>
+      
       <section className="overflow-hidden pt-20 pb-12  w-10/12 m-auto lg:pt-[120px] lg:pb-[90px]">
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap items-center justify-between">

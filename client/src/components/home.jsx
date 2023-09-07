@@ -13,10 +13,12 @@ function Home(props) {
       <div>
          
          <Section1 />
-         <Section2 />
+         <div className="smallscreenhide"><Section2 /></div>
+        <div className="largescreenhide" > <About /></div>
          <Section3 />
-         <About />
+         <div className="smallscreenhide"><About/></div>
          <Section4 />
+         <div className="largescreenhide" ><Section2 /></div>
          <Footer />
 
       </div>

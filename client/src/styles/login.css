@@ -137,3 +137,28 @@
     color: #353b48;
 }
 
+@media screen and (max-width: 870px) {
+    .loginBox21 .login-img {
+        display: none;
+    }
+
+    .loginBox21 .login-form {
+        height: auto;
+        width: 90%; 
+        margin: 2rem auto; 
+    }
+
+    .loginBox21 .login-form2 {
+        width: 90%;
+        height: auto;
+        padding: 2rem; 
+    }
+
+    .loginBox21 .signUpText2 {
+        margin-top: 8rem ;
+        
+    }
+    .loginBox21 .text-info p {
+        font-size: 1rem; 
+    }
+}

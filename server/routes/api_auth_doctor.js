@@ -103,7 +103,7 @@ Router.post("/addpatientDetail" , async (req,res)=>{
     
     if(req.isAuthenticated() && req.user.userType==="doctor" ){
         try{
-             console.log(req.body.PatientId)
+             
             const doc = await PatientUser.findOneAndUpdate({patientId:req.body.PatientId} , {$push:{ patientRecord:{
                 hospitalId:req.body.hospitalId,
                 hospitalName:req.body.hospitalName,

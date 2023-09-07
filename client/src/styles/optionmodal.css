@@ -82,3 +82,63 @@
   left: 4.2rem;
  color: white;
 }
+@media screen and (max-width:600px) {
+  .loginBox {
+    z-index: 12000;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.753);
+    box-shadow: 0 0 20px 1px #ffffff7a;
+    top: 25rem;
+    left: 5rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+    width: 90rem;
+    height: 120rem;
+  }
+  .bigSignup img {
+   display: none;
+  }
+  .signUpText {
+    color: white;
+    font-size: 8.2rem;
+   
+    width: 90rem;
+   
+    margin-top: 10.3rem;
+    
+    margin-bottom: 2.5rem;
+  }
+  .crossIcon {
+    color: #000;
+    position: absolute;
+    top: 5rem;
+    left: 80rem;
+    font-size: 4rem;
+    color: #fff;
+  }
+  .submitSet button {
+    color: white;
+    font-size: 4.1rem;
+    text-align: center;
+    position: relative;
+    top: 8.7rem;
+    left: 15.7rem;
+    width: 60rem;
+    height: 10.3rem;
+    background-color: transparent;
+    border: rgb(172, 172, 199) solid 2px;
+    outline: none;
+    border-radius: 0.5rem;
+    margin: 6rem auto;
+  }
+  .OptionLogin {
+    position: relative;
+    width: 80rem;
+    height: 5rem;
+    top: 15rem;
+    left: 12rem;
+   color: white;
+   font-size: 4rem;
+  }
+
+}
