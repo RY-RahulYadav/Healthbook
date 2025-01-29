@@ -1,0 +1,52 @@
+.Sbox4{
+ width: 85vw;
+
+ margin: auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ box-sizing: border-box;
+ 
+}
+.Sbox3{
+    width: 90vw;
+    margin: 2rem auto;
+    border: #0f274e solid 1px ;
+}
+.Sbox4 p{
+  
+     box-sizing: border-box;
+    width: 25vw;
+    overflow-wrap: break-word;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.Sbox4 p span{
+  
+  
+ font-weight: 200;
+
+}
+
+.Sbox5{
+    width: 92vw;
+    margin: auto;
+    display: flex;
+    /* justify-content: space-between; */
+
+}
+.card h5{
+    font-size: 1.08rem;
+}
+.Sbox5 .card{
+    width: 30vw;
+    margin:5px ;
+    /* border: none; */
+  
+    
+}
+
+.Sbox6 .card{
+    width: 70vw;
+    margin:10px auto;
+}

@@ -1,0 +1,121 @@
+
+
+
+.about-section{
+    background-color: rgb(22, 12, 40);
+    background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+    margin:  auto;
+    width: 100vw;
+    
+    color: rgb(255, 255, 255);
+
+	position:relative;
+	padding:120px 0px;
+}
+.about-section img{
+    width: 60rem;
+    height: 25rem;
+}
+
+.aboutcontainer{
+    margin: auto;
+    width: 80vw;
+}
+
+.combinedbox {
+	display: flex ;
+	justify-content: center;
+	align-items: center;
+    /* margin: 1rem 1rem; */
+}
+
+.combinedbox .titlebox{
+	position: relative;
+	top: -3rem;
+    margin-right:5rem;
+
+}
+.combinedbox .titlebox div {
+	
+	margin: 1.2rem;
+	font-size: 1.4rem;
+}
+.combinedbox .titlebox div p {
+	
+	color: rgb(12, 117, 255);
+	font-weight: 500;
+	font-size: 1.7rem;
+}
+.combinedbox .titlebox  .text {
+	font-size:1.05rem;
+}
+
+.about-section .btn-style-three {
+    top: 2rem;
+	left: 1.2rem;
+    position: relative;
+    /* line-height: 24px; */
+    color: hsl(224, 73%, 35%);
+    font-size: 18px;
+    font-weight: 700;
+    background: none;
+    /* display: inline-block; */
+    padding: 11px 40px;
+    background-color: #ededee;
+    /* text-transform: capitalize; */
+    border: 2px solid #ccc8c8;
+    font-family: 'Arimo', sans-serif;
+    
+}
+
+@media screen and (max-width:600px) {
+    .about-section{
+   
+        background-image: linear-gradient( 111.4deg,  rgb(255, 255, 255) 6.5%, rgb(255, 255, 255) 93.2% );
+      
+        
+        
+        color: rgb(0, 0, 0);
+        height: 90rem;
+    padding: 5rem 0;
+    }
+    .about-section img{
+        display: none;
+    }
+    .combinedbox .titlebox{
+        top: 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    
+    }
+    .combinedbox .titlebox div {
+	
+        margin: 2.2rem;
+        font-size: 6.4rem;
+    }
+    .combinedbox .titlebox div p {
+        
+        color: rgb(12, 117, 255);
+        font-weight: 500;
+        font-size: 5.7rem;
+    }
+    .combinedbox .titlebox  .text {
+        font-size:3.05rem;
+    }
+    .about-section .btn-style-three {
+        top: 3rem;
+       
+        color: hsl(224, 73%, 35%);
+        font-size: 14px;
+     
+        padding: 3px 40px;
+        margin-bottom: 4rem;
+        
+       
+        
+    }
+
+
+}

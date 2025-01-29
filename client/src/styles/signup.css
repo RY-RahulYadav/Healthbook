@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+.registerBox{
+    
+    display: flex;
+
+}
+
+.registerBox .img1{
+    position: relative;
+    top: 0rem;
+    width: 50vw;
+    height: 90vh;
+    left: 0rem;
+   
+}
+
+
+.wrapper{
+    position: relative;
+    width: 900px;
+    height: 100vh;
+    top: -3rem;
+    left: 0vw;
+    /* top: -2vh; */
+  background: #fff;
+  margin: 50px auto;
+  /* box-shadow: 0 0 10px #000000; */
+  /* box-shadow: 2px 2px 4px rgba(0,0,0,0.125); */
+  padding: 30px;
+  
+}
+
+.wrapper .title{
+  font-size: 34px;
+
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #4b43dd;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form{
+  width: 100%;
+  padding-left: 7rem;
+}
+
+.wrapper .form .inputfield{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #000000;
+   margin-right: 10px;
+  font-size: 18px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 60%;
+  height: 2rem;
+  outline: none;
+  border: 1px solid #474747;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 60%;
+  height: 130px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  border: 1px solid #474747;
+  width: 60%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #3c00ff;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+
+
+.wrapper .form .inputfield .btn{
+  width: 30%;
+   padding: 8px 10px;
+   position: relative;
+   top: 1.5rem;
+   left: 10rem;
+  font-size: 18px; 
+  border: 0px;
+  background:  #4506cd;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #ffd658;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .registerBox {
+      flex-direction: column;
+  }
+
+  .registerBox .img1 {
+    display: none;
+   
+  }
+
+  .wrapper {
+      width: 100%;
+      margin: 20px 0; 
+      padding: 15px; 
+      align-items: center;
+  }
+
+  .wrapper .form{
+    padding: 0 2rem 0 2rem;
+  }
+
+  .wrapper .title {
+      font-size: 24px; 
+      margin-bottom: 20px; 
+  }
+
+  .wrapper .form .inputfield label {
+      width: 100%; 
+      font-size: 18px;
+  }
+
+  .wrapper .form .inputfield .input,
+  .wrapper .form .inputfield .textarea {
+      width: 100%; 
+  }
+
+  .wrapper .form .inputfield .textarea {
+      width: 100%; 
+      height: auto; 
+  }
+
+  .wrapper .form .inputfield .custom_select {
+      width: 100%; 
+  }
+
+  .wrapper .form .inputfield .btn {
+      width: 100%; 
+      left: 0;
+  }
+}
+@media screen and (max-width: 1200px){
+  .registerBox .img1{
+  display: none;
+}
+}
+

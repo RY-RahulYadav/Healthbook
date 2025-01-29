@@ -1,0 +1,91 @@
+.patientinfobigBox1{
+    margin-top: 0;
+    background-color: #0f274e;
+    height: 30vh;
+    color: aliceblue;
+    padding-top: 3rem;
+}
+
+.patientinfocontainer{
+    width: 85vw;
+    margin: auto;
+    
+}
+
+.patientinfocontainer .Pbox1{
+    width: 85vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.patientinfocontainer span{
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight:500 ;
+
+}
+.psamebox{
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+
+.patientinsideBox1{
+    font-size: 2rem;
+    font-weight: 500;
+    height: 10vh;
+    margin-top: 2rem;
+    margin-bottom: 2.9rem;
+    text-align: center;
+    padding: 2rem;
+
+}
+.patientinsideBox2{
+    width: 80vw;
+   
+    margin: 0 auto;
+    border: #000000 solid 1px ;
+}
+
+.insidePbox{
+    margin: auto;
+    width: 80vw;
+    
+
+}
+.insidePbox2{
+    padding-top: 2px;
+    height: 2.5rem;
+   display: flex;
+  
+    
+}
+.insidePbox2 p{
+    
+    margin-top: 5px;
+    width: 20vw;
+    text-align: center;
+}
+.insidePbox2 .insidepara{
+    width: 4vw;
+}
+.insidePbox2 p a{
+    color: rgb(45, 45, 250);
+}
+.Pbox6{
+
+    margin:5rem auto;
+    width: 98vw;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Pbox5{
+   
+    width: 80vw;
+    margin: 2rem auto;
+    border: #0f274e solid 1px ;
+}

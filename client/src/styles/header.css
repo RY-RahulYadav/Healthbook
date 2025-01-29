@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden; 
+    box-sizing: border-box;
+    
+    /* background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% ); */
+}
+
+#root{
+  width: 100vw;
+  overflow-x: hidden;
+}
+html{
+  font-size: 1vw
+}
+a {
+    text-decoration: none;
+    color: black;
+  }
+ .container12{
+  margin: auto;
+  width: 83vw;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+ }
+  
+  .navbar {
+   height: 5rem;
+    
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    /* padding: 1rem 1.15rem; */
+    border-bottom: 1px solid #eceef3;
+   
+  }
+  .navbar-header {
+  
+    display: flex;
+ 
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-menu{
+  
+    margin-left: 2rem ;
+  }
+  
+  .navbar-nav {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-nav  li a {
+    font-size: 1.1rem;
+    color: #3c4250;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+  
+   .navbar-nav  li  a:hover {
+    color: #66f;
+  }
+   .navbar-header   span {
+
+    color: #66f;
+  }
+  .navbar-header h4{
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 1.3rem;
+  }
+  
+  
+
+  /* logedicon jsx style */
+  .logediconbox{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .logediconbox img {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0%;
+    margin-right: 0.8rem;
+  }
+  .logediconbox p{
+    
+    font-size: 1.03rem;
+  }
+  .logedcontainer .dropdown-menu{
+  margin: 0 1rem;
+ 
+    height: 10rem;
+    background-color: rgb(42, 41, 43);
+    color: white;
+  }
+  .logedcontainer .dropdown-menu li{
+    margin: 0.7rem auto;
+  }
+  .logedcontainer .dropdown-menu .dropdown-item:hover{
+      background-color: black;
+  }
+
+  .logedcontainer .dropdown-menu a{
+    color: #eceef3;
+  }
+
+
+
+.smallscreenhide{
+  display: block;
+}
+.largescreenhide{
+  display: none;
+}
+
+
+@media screen and (max-width: 900px){
+  .navbar {
+    height: 9rem;  
+   }
+   .navbar-nav  li a {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+ 
+  }
+  .navbar-header h4{
+ 
+    font-size: 1.9rem;
+
+  }
+  
+}
+
+@media screen and (max-width: 700px){
+  .navbar {
+    height: 11rem; 
+   
+   }
+   .container12{
+    width: 90vw;
+   }
+   .navbar-nav  li a {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+ 
+  }
+  .navbar-header h4{
+ 
+    font-size: 2.4rem;
+    margin-right: 1rem;
+
+  }
+  
+}
+@media screen and (max-width:600px) {
+  .largescreenhide{
+    display: block;
+  }
+  .smallscreenhide{
+    display: none;
+  }
+  .resNav{
+    height: 16rem;
+  }
+ .resNav nav{
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5.2rem;
+ }
+ .resNav nav h4{
+  font-size:4.7rem;
+  font-weight: 500;
+ }
+  
+ .resNav nav i{
+  font-size: 3.8rem;
+font-weight: bold;
+ }
+ .resNav h4 span {
+
+  color: #66f;
+}
+.resNav .openResNav{
+  background-color: rgb(0, 0, 0);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 100vh;
+  
+}
+.openResNav .opeRasNavBox1{
+  width: 85%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+  padding-top: 5rem;
+  color: aliceblue;
+}
+.opeRasNavBox1 .logobox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logobox img{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-right: 2.5rem;
+
+}
+.logobox p{
+  font-size: 4.2rem;
+}
+.opeRasNavBox1 i{
+ font-size: 4.5rem;
+ margin-right: 3rem;
+}  
+.opeRasNavBox2{
+  color: #ffffff;
+  margin-top: 15rem;
+  margin-left: 15rem;
+}
+.opeRasNavBox2 li{
+  list-style: none;
+  margin: 10rem 0;
+  display: flex;
+
+  align-items: center;
+}
+.opeRasNavBox2 li img{
+  width: 5rem;
+  height: 5rem;
+  margin-right: 4rem;
+  border-radius: 50%;
+  filter: invert();
+}
+.opeRasNavBox2 li i{
+  font-size: 3rem;
+  margin-right: 4rem;
+}
+.opeRasNavBox2 li a{
+  color: #ffffff;
+  font-size: 4rem;
+}
+
+/* footer css */
+.footerbox {
+  height: 70rem;
+  padding: 5rem;
+}
+.footerbox a , .footerbox h2, .footerbox span{
+font-size: 2.5rem;
+margin-bottom: 3rem;
+}
+.footerbox hr{
+  margin: 4rem 0;
+}
+.footerbox svg{
+ width: 4rem;
+ height: 4rem;
+ margin: 3rem 0;
+ margin-right: 3rem;
+ 
+}
+}

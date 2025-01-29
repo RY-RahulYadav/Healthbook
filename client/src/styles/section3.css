@@ -1,0 +1,200 @@
+.sectionbigBox{
+    width: 100vw;
+    height: 40rem;
+
+    background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+    
+}
+.sectionbigBox2{
+    width: 100vw;
+    height: 40rem;
+
+    background-color: #ffffff;
+    background-image: linear-gradient( 111.4deg,  rgb(255, 255, 255) 6.5%, rgb(255, 255, 255) 93.2% )
+}
+
+.sectionBox1{
+    
+    /*  */
+    width: 80vw;
+
+    margin: auto;
+    /* margin: 15rem auto; */
+    
+    display: flex;
+    
+
+}
+
+.sectionBox1 .healthTitle{
+    position: relative;
+    top: 15rem;
+    /* left: -10rem; */
+width: 35rem ;
+color: aliceblue;
+
+}
+
+.sectionBox1 .healthTitle2{
+    position: relative;
+    top: 15rem;
+    /* left: -10rem; */
+width: 35rem ;
+color: rgb(0, 0, 0);
+
+}
+.sectionBox1 .healthTitle2 p{
+    margin-top: 1rem;
+   font-size: 1rem;
+
+}
+.sectionBox1 .healthTitle p{
+    margin-top: 1rem;
+   font-size: 1rem;
+
+}
+.sectionBox1 .heathname1{
+    font-size: 0.8rem;
+    width: 30rem;
+}
+.sectionBox1 .heathname2 {
+    font-size: 3rem;
+    width: 40rem;
+}
+.sectionBox1 .heathname2   span {
+
+    color: rgb(94, 94, 255);
+  }
+  .sectionBox1 .heathimgsection{
+    width: 40rem;
+  }
+  
+.sectionBox1 .heathimgsection .img1{
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+     top: 5rem;
+    left: -2rem; 
+    border-radius: 50%;
+    z-index: 50;
+}
+.sectionBox1 .heathimgsection .img2{
+    /* visibility: hidden; */
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+     top: 5rem;
+    left: 10rem; 
+    border-radius: 50%;
+    z-index: 50;
+}
+
+@media screen and (max-width:600px){
+    .sectionbigBox{
+        width: 100vw;
+        height: 75rem; 
+        color: rgb(255, 255, 255);
+        background-image: linear-gradient( 111.4deg,  rgb(0, 0, 0) 6.5%, rgb(28, 16, 90) 93.2% );
+    }
+    .sectionbigBox2{
+        width: 100vw;
+        height: 75rem;
+        color: rgb(255, 255, 255);
+        background-image: linear-gradient( 111.4deg,  rgb(255, 255, 255) 6.5%, rgb(255, 255, 255) 93.2% );
+    }
+    .sectionBox1 .healthTitle{
+        position: relative;
+        top: 15rem;
+        left: 7rem;
+    width: 40rem ;
+    color: rgb(242, 238, 238);
+    
+    }
+    .sectionBox1 .healthTitle2{
+        position: relative;
+        top: 20rem;
+        left: 5rem;
+    width: 30rem ;
+    margin-right: 22rem;
+    color: rgb(5, 5, 5);
+    
+    }
+    .sectionBox1 .healthTitle2 p{
+        width: 40rem;
+        margin-top: 1rem;
+       font-size: 3rem;
+    
+    }
+    .sectionBox1{
+        width: 100vw;
+    }
+    
+    .sectionBox1 .heathimgsection .img1{
+        width: 38rem;
+        height: 38rem;
+        position: relative;
+          top: 20rem;
+        left: 5rem;  
+        border-radius: 50%;
+        z-index: 50;
+    }
+    .sectionBox1 .heathimgsection .img2{
+        width: 38rem;
+        height: 38rem;
+        position: relative;
+         top: 18rem;
+        left: 5rem; 
+        border-radius: 50%;
+        z-index: 50;
+    }
+    .sectionBox1 .healthTitle p{
+        margin-top: 1rem;
+       font-size: 3rem;
+    
+    }
+    .sectionBox1 .heathname1{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        width: 30rem;
+    }
+    .sectionBox1 .heathname2 {
+        font-size: 4.3rem;
+        font-weight: 500;
+        width: 50rem;
+        margin-bottom: 2rem;
+    }
+
+   /* section4 css */
+
+   .object-center  img{
+    width: 40rem;
+    height: 40rem;
+   }
+   .mysection4box{
+    width: 100vw;
+    height: 70rem;
+    
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient( 111.4deg,  rgb(0, 0, 0) 6.5%, rgb(28, 16, 90) 93.2% );
+    margin-left: 0;
+    left: 0;
+   }
+   .mysection4box .text .uppercase{
+    font-size: 3rem;
+    color: #ffffffe5;
+    margin-bottom: 2rem;
+   }
+   .mysection4box .text h2{
+    font-size: 4rem;
+    color: #ffffffa6;
+    line-height: 6rem;
+   }
+   .mysection4box .text p{
+    font-size: 3rem;
+    color: #d6d1d1;
+   }
+   .mysection4childbox{
+    width: 50vw;
+   }
+}

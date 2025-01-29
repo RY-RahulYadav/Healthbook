@@ -1,0 +1,105 @@
+
+.section3container{
+    width: 100vw;
+    /* height: 60vh; */
+    background:   url("/section3.jpeg")  no-repeat center center/cover;
+    
+    margin-bottom: 2rem;
+}
+
+
+.sectionBox3{
+    
+    width: 80vw;
+    /* margin: auto; */
+    /* margin: 10rem auto; */
+    
+    display: flex;
+
+}
+
+.sectionBox3 .healthTitle{
+    position: relative;
+    top: 6rem;
+    left: 10rem;
+width: 35rem ;
+height: 30rem;
+color: white;
+
+}
+.sectionBox3 .healthTitle p{
+    margin-top: 1rem;
+   font-size: 1.3rem;
+
+}
+.sectionBox3 .heathname1{
+    font-size: 3.8rem;
+    width: 30vw;
+    
+}
+.sectionBox3 .heathname2 {
+    font-size: 5rem;
+    width: 45vw;
+    overflow: hidden; 
+ 
+  white-space: nowrap; 
+  letter-spacing: .11em; 
+  border-right: 5px solid rgb(255, 255, 255);
+  animation: typewriter 3s  steps(44) 0s 1 normal both,
+  blinkTextCursor 500ms steps(44) infinite;
+
+
+  
+  
+  
+
+}
+.sectionBox3 .heathname2   span {
+
+    color: rgb(94, 94, 255);
+  }
+ 
+
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 100%;border-right: 0px solid transparent; }
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+  
+  @media screen and  (max-width:600px){
+    .sectionBox3{
+      height: 65rem;
+    }
+    .sectionBox3 .healthTitle{
+      position: relative;
+      top: 15rem;
+      left: 10rem;
+  width: 65rem ;
+  height:60rem;
+  color: white;
+  
+  }
+  .sectionBox3 .heathname1{
+    font-size: 7.9rem;
+    width: 60vw;
+    
+}
+.sectionBox3 .heathname2{
+  font-size: 8.8rem;
+  width: 60vw;
+  
+}
+.sectionBox3 .healthTitle p{
+  margin-top: 2rem;
+ font-size: 2.7rem;
+
+}
+.section3container{
+  margin-bottom: 0;
+}
+
+
+}

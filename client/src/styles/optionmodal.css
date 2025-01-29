@@ -1,0 +1,144 @@
+ /* optionModal */
+
+ .modalContainer {
+    z-index: 100;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #000000b3;
+    width: 100vw;
+     height: 300vh; 
+    filter: blur(0rem);
+}
+.loginBox {
+  z-index: 12000;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.753);
+  box-shadow: 0 0 20px 1px #ffffff7a;
+  top: 9rem;
+  left: 25rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(2rem);
+  width: 50rem;
+  height: 30rem;
+}
+ .bigSignup {
+  display: flex;
+}
+.bigSignup img {
+  width: 25rem;
+  height: 30rem;
+  opacity: .8;
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+ .signUpText {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 500;
+  width: 24rem;
+  text-align: center;
+  margin-top: 2.3rem;
+  
+  margin-bottom: 0.5rem;
+}
+ .signUpText span {
+    color: #66f;
+}
+ .Signucontainer {
+  z-index: 600;
+  width: 25rem;
+  height: 20rem;
+  position: relative;
+  top: 1rem;
+}
+ .crossIcon {
+  color: #000;
+  position: absolute;
+  top: 2rem;
+  left: 47rem;
+  color: #fff;
+}
+
+
+ .submitSet button {
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  position: relative;
+  top: 1.7rem;
+  left: 4.7rem;
+  width: 60%;
+  height: 3.3rem;
+  background-color: transparent;
+  border: rgb(172, 172, 199) solid 2px;
+  outline: none;
+  border-radius: 0.5rem;
+  margin: 1.2rem auto;
+}
+ .OptionLogin {
+  position: relative;
+  width: 25rem;
+  top: 6rem;
+  left: 4.2rem;
+ color: white;
+}
+@media screen and (max-width:600px) {
+  .loginBox {
+    z-index: 12000;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.753);
+    box-shadow: 0 0 20px 1px #ffffff7a;
+    top: 25rem;
+    left: 5rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+    width: 90rem;
+    height: 120rem;
+  }
+  .bigSignup img {
+   display: none;
+  }
+  .signUpText {
+    color: white;
+    font-size: 8.2rem;
+   
+    width: 90rem;
+   
+    margin-top: 10.3rem;
+    
+    margin-bottom: 2.5rem;
+  }
+  .crossIcon {
+    color: #000;
+    position: absolute;
+    top: 5rem;
+    left: 80rem;
+    font-size: 4rem;
+    color: #fff;
+  }
+  .submitSet button {
+    color: white;
+    font-size: 4.1rem;
+    text-align: center;
+    position: relative;
+    top: 8.7rem;
+    left: 15.7rem;
+    width: 60rem;
+    height: 10.3rem;
+    background-color: transparent;
+    border: rgb(172, 172, 199) solid 2px;
+    outline: none;
+    border-radius: 0.5rem;
+    margin: 6rem auto;
+  }
+  .OptionLogin {
+    position: relative;
+    width: 80rem;
+    height: 5rem;
+    top: 15rem;
+    left: 12rem;
+   color: white;
+   font-size: 4rem;
+  }
+
+}

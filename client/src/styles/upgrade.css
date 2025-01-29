@@ -1,0 +1,70 @@
+.updatebox .input .dig {
+    height: 100px;
+}
+
+.updatebox .txt-col-white {
+    color: #ffffff;
+}
+.spanTitle{
+    
+   background-color: #0f274e;
+   border: rgb(113, 113, 160) solid 1px ;
+  
+
+}
+
+.updatebox .med-list {
+    width: 45%;
+    height: 300px;
+}
+
+.updatebox .form-container {
+    margin: 2% 10% 0px 10%;
+}
+
+.updatebox .med-list-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.updatebox .non-med-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.updatebox .remarks {
+    height: 100px;
+}
+
+.updatebox .doc-details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.updatebox form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.updatebox .card input {
+    width: 350px;
+    border-radius: 4px;
+    border-style: groove;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.updatebox button[type="button"] {
+    margin: 8rem auto;
+    width: 50%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f274e;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
